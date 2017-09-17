@@ -40,18 +40,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="打开Oracle服务 配置监听器(学校机房没有配置监听器服务，不能使用第三方工具登录 Oracle) 方法：开始菜单中找到[net configration assistant]添加一个监听器 用system用户登录sqlplus 解锁scott用户 :  alter user scott account unlock; 修改scott密码:  alter user scott identifi">
+<meta name="description" content="Introduction: Some simple notes of Learning Oralce Database.">
 <meta name="keywords" content="笔记,Oracle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="一、Oracle setup 笔记">
 <meta property="og:url" content="http://yoursite.com/2017/09/17/Oracle-setup-笔记/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
-<meta property="og:description" content="打开Oracle服务 配置监听器(学校机房没有配置监听器服务，不能使用第三方工具登录 Oracle) 方法：开始菜单中找到[net configration assistant]添加一个监听器 用system用户登录sqlplus 解锁scott用户 :  alter user scott account unlock; 修改scott密码:  alter user scott identifi">
+<meta property="og:description" content="Introduction: Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-16T18:56:33.743Z">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/modernism-macbook-keyboard-laptops.jpg">
+<meta property="og:updated_time" content="2017-09-17T09:35:08.447Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="一、Oracle setup 笔记">
-<meta name="twitter:description" content="打开Oracle服务 配置监听器(学校机房没有配置监听器服务，不能使用第三方工具登录 Oracle) 方法：开始菜单中找到[net configration assistant]添加一个监听器 用system用户登录sqlplus 解锁scott用户 :  alter user scott account unlock; 修改scott密码:  alter user scott identifi">
+<meta name="twitter:description" content="Introduction: Some simple notes of Learning Oralce Database.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/modernism-macbook-keyboard-laptops.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -417,14 +419,26 @@
       
 
       
-        <span itemprop="articleBody"><ol>
-<li>打开Oracle服务</li>
-<li>配置监听器(学校机房没有配置监听器服务，不能使用第三方工具登录 Oracle)<br> 方法：开始菜单中找到[net configration assistant]添加一个监听器</li>
-<li>用system用户登录sqlplus</li>
-<li>解锁scott用户 :  alter user scott account unlock;</li>
-<li>修改scott密码:  alter user scott identified by tiger;</li>
-<li>可以使用scott登录sqlplus</li>
-<li>安装PL/SQL第三方工具</li>
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/modernism-macbook-keyboard-laptops.jpg" alt="Oracle notes"><br><strong>Introduction: Some simple notes of Learning Oralce Database.</strong><br><a id="more"></a></p>
+<hr>
+<p>学校实验机房配置方法：</p>
+<ol>
+<li>打开Oracle服务.</li>
+<li><p>配置监听器(学校机房没有配置监听器服务，不能使用第三方工具登录 Oracle )</p>
+<blockquote>
+<p>开始菜单中找到 [net configration assistant] 添加一个监听器.</p>
+</blockquote>
+</li>
+<li>用 <em>system</em> 用户登录 <strong>sqlplus</strong>.</li>
+<li><p>解锁 <em>scott</em> 用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alter user scott account unlock;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改 <em>scott</em> 密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alter user scott identified by tiger;</div></pre></td></tr></table></figure>
+</li>
+<li><p>可以使用 <em>scott</em> 登录 <strong>SQLPlus</strong>.</p>
+</li>
+<li>安装 <strong>PL/SQL</strong> 第三方工具.</li>
 </ol>
 </span>
       
