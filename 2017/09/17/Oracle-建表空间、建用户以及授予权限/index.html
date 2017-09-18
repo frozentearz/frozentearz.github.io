@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="无线网络," />
+  <meta name="keywords" content="Oracle,笔记," />
 
 
 
@@ -40,22 +40,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Introduction: 802.11  头部基本概念、图解 802.11 数据包.">
-<meta name="keywords" content="无线网络">
+<meta name="description" content="Introduction: Some simple notes of Learning Oralce Database.">
+<meta name="keywords" content="Oracle,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第五章 802.11 头部">
-<meta property="og:url" content="http://yoursite.com/2017/07/28/第五章-802-11-头部/index.html">
+<meta property="og:title" content="第二章、Oracle 笔记——建表空间、建用户以及授予权限">
+<meta property="og:url" content="http://yoursite.com/2017/09/17/Oracle-建表空间、建用户以及授予权限/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
-<meta property="og:description" content="Introduction: 802.11  头部基本概念、图解 802.11 数据包.">
+<meta property="og:description" content="Introduction: Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/communication5.jpg">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/MPDU.png">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/Subtype.png">
-<meta property="og:updated_time" content="2017-09-16T06:17:39.686Z">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/notebook-and-ballpoint-with-laptop-in-background.jpg">
+<meta property="og:updated_time" content="2017-09-18T04:53:11.363Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第五章 802.11 头部">
-<meta name="twitter:description" content="Introduction: 802.11  头部基本概念、图解 802.11 数据包.">
-<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/communication5.jpg">
+<meta name="twitter:title" content="第二章、Oracle 笔记——建表空间、建用户以及授予权限">
+<meta name="twitter:description" content="Introduction: Some simple notes of Learning Oralce Database.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/notebook-and-ballpoint-with-laptop-in-background.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -65,7 +63,7 @@
   };
 </script>
 
-  <title> 第五章 802.11 头部 | Frazier's World </title>
+  <title> 第二章、Oracle 笔记——建表空间、建用户以及授予权限 | Frazier's World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -371,7 +369,7 @@
           
           
             
-              第五章 802.11 头部
+              第二章、Oracle 笔记——建表空间、建用户以及授予权限
             
           
         </h1>
@@ -380,8 +378,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2017-07-28T20:09:17+08:00" content="2017-07-28">
-            2017-07-28
+          <time itemprop="dateCreated" datetime="2017-09-17T17:44:23+08:00" content="2017-09-17">
+            2017-09-17
           </time>
         </span>
 
@@ -390,8 +388,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/wlan/" itemprop="url" rel="index">
-                  <span itemprop="name">wlan</span>
+                <a href="/categories/Oracle/" itemprop="url" rel="index">
+                  <span itemprop="name">Oracle</span>
                 </a>
               </span>
 
@@ -406,8 +404,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2017/07/28/第五章-802-11-头部/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/28/第五章-802-11-头部/" itemprop="commentsCount"></span>
+            <a href="/2017/09/17/Oracle-建表空间、建用户以及授予权限/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/17/Oracle-建表空间、建用户以及授予权限/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -421,36 +419,63 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/communication5.jpg" alt="Wlan"><br><strong>Introduction</strong>: <strong>802.11</strong>  头部基本概念、图解 <strong>802.11</strong> 数据包.<br><a id="more"></a></p>
-<h5 id="802-11-头部基本概念"><a href="#802-11-头部基本概念" class="headerlink" title="802.11 头部基本概念"></a>802.11 头部基本概念</h5><h6 id="DU-Data-Unit"><a href="#DU-Data-Unit" class="headerlink" title="DU (Data Unit)"></a>DU (Data Unit)</h6><blockquote>
-<p>数据单元，信息传输的最小数据集合</p>
-</blockquote>
-<h6 id="Header"><a href="#Header" class="headerlink" title="Header"></a>Header</h6><blockquote>
-<p>传递过程逐层封装头部</p>
-</blockquote>
-<h6 id="SDU-Service-Data-Unit"><a href="#SDU-Service-Data-Unit" class="headerlink" title="SDU(Service Data Unit)"></a>SDU(Service Data Unit)</h6><blockquote>
-<p>上层发送数据包到本层，对于本层而言，上层要求本层对数据包进行传输服务，所以上层传过来的数据包被叫做“服务数据单元”</p>
-</blockquote>
-<h6 id="PDU-Protocol-Data-Unit"><a href="#PDU-Protocol-Data-Unit" class="headerlink" title="PDU(Protocol Data Unit)"></a>PDU(Protocol Data Unit)</h6><blockquote>
-<p>本层发送数据包到下层，对于本层而言，本层已经给数据包加入头部信息，所以传下去的数据包被叫做“协议数据单元”</p>
-</blockquote>
-<h5 id="图解数据包"><a href="#图解数据包" class="headerlink" title="图解数据包"></a>图解数据包</h5><p><img src="http://otdo5q3gt.bkt.clouddn.com/MPDU.png" alt="笔记"></p>
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/notebook-and-ballpoint-with-laptop-in-background.jpg" alt="Oracle notes"><br><strong>Introduction: Some simple notes of Learning Oralce Database.</strong><br><a id="more"></a></p>
+<hr>
+<h5 id="一、Oracle常用命令"><a href="#一、Oracle常用命令" class="headerlink" title="一、Oracle常用命令"></a>一、Oracle常用命令</h5><h6 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h6><pre><code>connect [用户名/密码@数据库名]
+</code></pre><p>如:</p>
+<pre><code>conn scott/tiger@orcl
+</code></pre><h6 id="显示当前用户"><a href="#显示当前用户" class="headerlink" title="显示当前用户"></a>显示当前用户</h6><pre><code>show user
+</code></pre><h6 id="显示表的结构"><a href="#显示表的结构" class="headerlink" title="显示表的结构"></a>显示表的结构</h6><pre><code>describe 表名
+</code></pre><p>如：</p>
+<pre><code>desc scott.emp
+</code></pre><h5 id="二、创建表空间"><a href="#二、创建表空间" class="headerlink" title="二、创建表空间"></a>二、创建表空间</h5><p>格式：</p>
+<pre><code>create tablespace [表空间名] datafile [&apos;文件路径&apos;] size [文件大小];
+</code></pre><p>如：</p>
+<pre><code>create tablespace mySpace datafile &apos;d:\mySpace.dbf&apos; size 10m;
+</code></pre><p>删除表空间：</p>
+<pre><code>drop tablespace myspace;
+</code></pre><h5 id="三、创建用户"><a href="#三、创建用户" class="headerlink" title="三、创建用户"></a>三、创建用户</h5><p>格式:</p>
+<pre><code>create user [用户名] identified by [密码] default tablespace [默认表空间名]
+</code></pre><p>如：</p>
+<pre><code>create user user1 identified by user1 default tablespace system
+</code></pre><p>删除用户：</p>
+<pre><code>drop user user1
+</code></pre><h5 id="四、给用户授权"><a href="#四、给用户授权" class="headerlink" title="四、给用户授权"></a>四、给用户授权</h5><h6 id="方式一：授予角色"><a href="#方式一：授予角色" class="headerlink" title="方式一：授予角色"></a>方式一：授予角色</h6><ul>
+<li>connect  :    登录</li>
+<li>resource:     普通权限，用于操作</li>
+<li>DBA:          管理员权限 （慎用）</li>
+</ul>
+<p>如：</p>
+<pre><code>grant connect to user1
+
+grant connect,resource to user1
+</code></pre><h6 id="方式二：授予单个权限"><a href="#方式二：授予单个权限" class="headerlink" title="方式二：授予单个权限"></a>方式二：授予单个权限</h6><p>如：</p>
 <ul>
-<li><strong>「Frame Control」</strong> (2 Byte) —— 帧控<ul>
-<li><strong>「Protocol Version」</strong>  (2 bit) —— 802.11 协议版本 (00-0 / 01-1 / 10-2 / 11-3)</li>
-<li><strong> 「Type」</strong>  (2 bit) —— 规定帧的具体用途 (三种帧类型)<ul>
-<li><strong>「Control Frame」</strong> 控制帧 (1)</li>
-<li><strong>「Data Frame」</strong> 数据帧 (2)</li>
-<li><strong>「Management Frame」</strong> 管理帧 (0)</li>
+<li><p>授予 <em>user1</em> 建表的权限</p>
+<pre><code>grant create table to user1
+</code></pre></li>
+<li><p>授予 <em>user1</em> 删表的权限</p>
+<pre><code>grant drop table to user1
+</code></pre></li>
 </ul>
-</li>
-<li><strong>「Subtype」</strong> (4 bit) —— 子类型</li>
-</ul>
-</li>
-</ul>
-<p><img src="http://otdo5q3gt.bkt.clouddn.com/Subtype.png" alt="Subtype"></p>
+<h6 id="方式三：将某个对象的权限授予用户"><a href="#方式三：将某个对象的权限授予用户" class="headerlink" title="方式三：将某个对象的权限授予用户"></a>方式三：将某个对象的权限授予用户</h6><p>如：</p>
 <ul>
-<li><strong>「Sequence Control」</strong> (2 Byte) —— 序列控制：给数据包进行编号</li>
+<li><p>将 <em>scott</em> 用户的emp表的查询权限授予 <em>user1</em>:</p>
+<pre><code>grant select on scott.emp to user1
+</code></pre></li>
+<li><p>将 <em>scott</em> 用户的emp表的所有权限授予 <em>user1</em>:</p>
+<pre><code>grant  all on scott.emp to user1
+</code></pre></li>
+</ul>
+<h6 id="收回权限"><a href="#收回权限" class="headerlink" title="收回权限"></a>收回权限</h6><p>回收用户的某项权限</p>
+<pre><code>revoke [权限] from [用户]
+</code></pre><ul>
+<li><p>收回 <em>user1</em> 的 <strong>connect</strong> 权限</p>
+<pre><code>revoke connect from user1
+</code></pre></li>
+<li><p>收回 <em>user1</em> 对 <strong>emp</strong> 表的查询权限</p>
+<pre><code>revoke select on scott.emp from user1
+</code></pre></li>
 </ul>
 </span>
       
@@ -460,7 +485,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/无线网络/" rel="tag">#无线网络</a>
+            <a href="/tags/Oracle/" rel="tag">#Oracle</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
         </div>
       
@@ -469,13 +496,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/对于学习深与广的看法/" rel="prev">对于学习深与广的看法</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/28/第四章-无线网络协议栈/" rel="next">第四章 无线网络协议栈</a>
+              <a href="/2017/09/17/Oracle-setup-笔记/" rel="next">第一章、Oracle 笔记——Setup</a>
             
           </div>
         </div>
@@ -743,7 +768,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#802-11-头部基本概念"><span class="nav-number">1.</span> <span class="nav-text">802.11 头部基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#DU-Data-Unit"><span class="nav-number">1.1.</span> <span class="nav-text">DU (Data Unit)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Header"><span class="nav-number">1.2.</span> <span class="nav-text">Header</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#SDU-Service-Data-Unit"><span class="nav-number">1.3.</span> <span class="nav-text">SDU(Service Data Unit)</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#PDU-Protocol-Data-Unit"><span class="nav-number">1.4.</span> <span class="nav-text">PDU(Protocol Data Unit)</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#图解数据包"><span class="nav-number">2.</span> <span class="nav-text">图解数据包</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#一、Oracle常用命令"><span class="nav-number">1.</span> <span class="nav-text">一、Oracle常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#切换用户"><span class="nav-number">1.1.</span> <span class="nav-text">切换用户</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#显示当前用户"><span class="nav-number">1.2.</span> <span class="nav-text">显示当前用户</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#显示表的结构"><span class="nav-number">1.3.</span> <span class="nav-text">显示表的结构</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#二、创建表空间"><span class="nav-number">2.</span> <span class="nav-text">二、创建表空间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三、创建用户"><span class="nav-number">3.</span> <span class="nav-text">三、创建用户</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#四、给用户授权"><span class="nav-number">4.</span> <span class="nav-text">四、给用户授权</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#方式一：授予角色"><span class="nav-number">4.1.</span> <span class="nav-text">方式一：授予角色</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方式二：授予单个权限"><span class="nav-number">4.2.</span> <span class="nav-text">方式二：授予单个权限</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方式三：将某个对象的权限授予用户"><span class="nav-number">4.3.</span> <span class="nav-text">方式三：将某个对象的权限授予用户</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#收回权限"><span class="nav-number">4.4.</span> <span class="nav-text">收回权限</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -806,9 +831,9 @@
 
   <script type="text/javascript">
     var disqus_shortname = 'xxx';
-    var disqus_identifier = '2017/07/28/第五章-802-11-头部/';
-    var disqus_title = '第五章 802.11 头部';
-    var disqus_url = 'http://yoursite.com/2017/07/28/第五章-802-11-头部/';
+    var disqus_identifier = '2017/09/17/Oracle-建表空间、建用户以及授予权限/';
+    var disqus_title = '第二章、Oracle 笔记——建表空间、建用户以及授予权限';
+    var disqus_url = 'http://yoursite.com/2017/09/17/Oracle-建表空间、建用户以及授予权限/';
 
     function run_disqus_script(disqus_script){
       var dsq = document.createElement('script');
