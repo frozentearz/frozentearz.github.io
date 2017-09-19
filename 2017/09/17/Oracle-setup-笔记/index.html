@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="笔记,Oracle," />
+  <meta name="keywords" content="Oracle,笔记," />
 
 
 
@@ -41,7 +41,7 @@
 
 
 <meta name="description" content="Introduction: Some simple notes of Learning Oralce Database.">
-<meta name="keywords" content="笔记,Oracle">
+<meta name="keywords" content="Oracle,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第一章、Oracle 笔记——Setup">
 <meta property="og:url" content="http://yoursite.com/2017/09/17/Oracle-setup-笔记/index.html">
@@ -49,7 +49,7 @@
 <meta property="og:description" content="Introduction: Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/modernism-macbook-keyboard-laptops.jpg">
-<meta property="og:updated_time" content="2017-09-17T15:38:35.479Z">
+<meta property="og:updated_time" content="2017-09-19T09:49:28.395Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第一章、Oracle 笔记——Setup">
 <meta name="twitter:description" content="Introduction: Some simple notes of Learning Oralce Database.">
@@ -425,23 +425,23 @@
 <ol>
 <li><p>打开Oracle服务.</p>
 </li>
-<li><p>配置监听器(学校机房没有配置监听器服务，不能使用第三方工具登录 Oracle)</p>
-<blockquote>
-<p>开始菜单中找到 [net configration assistant] 添加一个监听器.</p>
-</blockquote>
-</li>
+<li><p>配置监听器(学校机房没有配置监听器服务，不能使用第三方工具登录 Oracle)<br>解决方法：</p>
+<pre><code>开始菜单中找到 [net configration assistant] 添加一个监听器.
+</code></pre></li>
 <li><p>用 <em>system</em> 用户登录 <strong>sqlplus</strong>.</p>
 </li>
 <li><p>解锁 <em>scott</em> 用户</p>
-<p> <code>alter user scott account unlock;</code></p>
-</li>
+<pre><code>alter user scott account unlock;
+</code></pre></li>
 <li><p>修改 <em>scott</em> 密码</p>
-<p> <code>alter user scott identified by tiger;</code></p>
-</li>
+<pre><code>alter user scott identified by tiger;
+</code></pre></li>
 <li><p>可以使用 <em>scott</em> 登录 <strong>SQLPlus</strong>.</p>
 </li>
-<li>安装 <strong>PL/SQL</strong> 第三方工具.</li>
+<li><p>安装 <strong>PL/SQL</strong> 第三方工具.</p>
+</li>
 </ol>
+<hr>
 </span>
       
     </div>
@@ -450,9 +450,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag">#笔记</a>
-          
             <a href="/tags/Oracle/" rel="tag">#Oracle</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
         </div>
       
@@ -664,7 +664,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

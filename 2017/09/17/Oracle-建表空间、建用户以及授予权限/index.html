@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="笔记,Oracle," />
+  <meta name="keywords" content="Oracle,笔记," />
 
 
 
@@ -41,7 +41,7 @@
 
 
 <meta name="description" content="Introduction: Some simple notes of Learning Oralce Database.">
-<meta name="keywords" content="笔记,Oracle">
+<meta name="keywords" content="Oracle,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第二章、Oracle 笔记——建表空间、建用户以及授予权限">
 <meta property="og:url" content="http://yoursite.com/2017/09/17/Oracle-建表空间、建用户以及授予权限/index.html">
@@ -49,7 +49,7 @@
 <meta property="og:description" content="Introduction: Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/notebook-and-ballpoint-with-laptop-in-background.jpg">
-<meta property="og:updated_time" content="2017-09-18T04:56:00.250Z">
+<meta property="og:updated_time" content="2017-09-19T09:45:50.863Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二章、Oracle 笔记——建表空间、建用户以及授予权限">
 <meta name="twitter:description" content="Introduction: Some simple notes of Learning Oralce Database.">
@@ -428,19 +428,22 @@
 </code></pre><h6 id="显示表的结构"><a href="#显示表的结构" class="headerlink" title="显示表的结构"></a>显示表的结构</h6><pre><code>describe 表名
 </code></pre><p>如：</p>
 <pre><code>desc scott.emp
-</code></pre><h5 id="二、创建表空间"><a href="#二、创建表空间" class="headerlink" title="二、创建表空间"></a>二、创建表空间</h5><p>格式：</p>
+</code></pre><hr>
+<h5 id="二、创建表空间"><a href="#二、创建表空间" class="headerlink" title="二、创建表空间"></a>二、创建表空间</h5><p>格式：</p>
 <pre><code>create tablespace [表空间名] datafile [&apos;文件路径&apos;] size [文件大小];
 </code></pre><p>如：</p>
 <pre><code>create tablespace mySpace datafile &apos;d:\mySpace.dbf&apos; size 10m;
 </code></pre><p>删除表空间：</p>
 <pre><code>drop tablespace myspace;
-</code></pre><h5 id="三、创建用户"><a href="#三、创建用户" class="headerlink" title="三、创建用户"></a>三、创建用户</h5><p>格式:</p>
+</code></pre><hr>
+<h5 id="三、创建用户"><a href="#三、创建用户" class="headerlink" title="三、创建用户"></a>三、创建用户</h5><p>格式:</p>
 <pre><code>create user [用户名] identified by [密码] default tablespace [默认表空间名]
 </code></pre><p>如：</p>
 <pre><code>create user user1 identified by user1 default tablespace system
 </code></pre><p>删除用户：</p>
 <pre><code>drop user user1
-</code></pre><h5 id="四、给用户授权"><a href="#四、给用户授权" class="headerlink" title="四、给用户授权"></a>四、给用户授权</h5><h6 id="方式一：授予角色"><a href="#方式一：授予角色" class="headerlink" title="方式一：授予角色"></a>方式一：授予角色</h6><ul>
+</code></pre><hr>
+<h5 id="四、给用户授权"><a href="#四、给用户授权" class="headerlink" title="四、给用户授权"></a>四、给用户授权</h5><h6 id="方式一：授予角色"><a href="#方式一：授予角色" class="headerlink" title="方式一：授予角色"></a>方式一：授予角色</h6><ul>
 <li>connect  :    登录</li>
 <li>resource:     普通权限，用于操作</li>
 <li>DBA:          管理员权限 （慎用）</li>
@@ -477,6 +480,7 @@ grant connect,resource to user1
 <pre><code>revoke select on scott.emp from user1
 </code></pre></li>
 </ul>
+<hr>
 </span>
       
     </div>
@@ -485,9 +489,9 @@ grant connect,resource to user1
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag">#笔记</a>
-          
             <a href="/tags/Oracle/" rel="tag">#Oracle</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
         </div>
       
@@ -699,7 +703,7 @@ grant connect,resource to user1
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
