@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="无线网络," />
+  <meta name="keywords" content="Oracle,笔记," />
 
 
 
@@ -40,20 +40,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="分贝、 分贝毫瓦、与各种天线.">
-<meta name="keywords" content="无线网络">
+<meta name="description" content="Some simple notes of Learning Oralce Database.">
+<meta name="keywords" content="Oracle,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第三章  无线技术的常用概念">
-<meta property="og:url" content="http://yoursite.com/2017/07/28/第三章-无线技术的常用概念/index.html">
+<meta property="og:title" content="第四章、Oracle-条件查询与函数">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/Oracle-条件查询与函数/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
-<meta property="og:description" content="分贝、 分贝毫瓦、与各种天线.">
+<meta property="og:description" content="Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/communication3.jpg">
-<meta property="og:updated_time" content="2017-10-21T16:29:00.210Z">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/notebook-person-man-laptops.jpg">
+<meta property="og:updated_time" content="2017-10-21T19:16:16.580Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第三章  无线技术的常用概念">
-<meta name="twitter:description" content="分贝、 分贝毫瓦、与各种天线.">
-<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/communication3.jpg">
+<meta name="twitter:title" content="第四章、Oracle-条件查询与函数">
+<meta name="twitter:description" content="Some simple notes of Learning Oralce Database.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/notebook-person-man-laptops.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +63,7 @@
   };
 </script>
 
-  <title> 第三章  无线技术的常用概念 | Frazier's World </title>
+  <title> 第四章、Oracle-条件查询与函数 | Frazier's World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -369,7 +369,7 @@
           
           
             
-              第三章  无线技术的常用概念
+              第四章、Oracle-条件查询与函数
             
           
         </h1>
@@ -378,8 +378,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2017-07-28T19:54:28+08:00" content="2017-07-28">
-            2017-07-28
+          <time itemprop="dateCreated" datetime="2017-10-22T00:25:02+08:00" content="2017-10-22">
+            2017-10-22
           </time>
         </span>
 
@@ -388,8 +388,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/wlan/" itemprop="url" rel="index">
-                  <span itemprop="name">wlan</span>
+                <a href="/categories/Oracle/" itemprop="url" rel="index">
+                  <span itemprop="name">Oracle</span>
                 </a>
               </span>
 
@@ -404,8 +404,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2017/07/28/第三章-无线技术的常用概念/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/28/第三章-无线技术的常用概念/" itemprop="commentsCount"></span>
+            <a href="/2017/10/22/Oracle-条件查询与函数/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/22/Oracle-条件查询与函数/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -419,38 +419,177 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/communication3.jpg" alt="Wlan"><br><strong>分贝、 分贝毫瓦、与各种天线.</strong><br><a id="more"></a></p>
-<h5 id="分贝（dB）"><a href="#分贝（dB）" class="headerlink" title="分贝（dB）"></a>分贝（dB）</h5><h6 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h6><blockquote>
-<p>衡量无线信号功率的强度，表示<strong>两个</strong>信号直接的<strong>差异</strong>比率，用于描述设备的信号强度。因为是指两个信号直接的<strong>差异</strong>，所以dB是一个<strong>相对值</strong>。</p>
-</blockquote>
-<h5 id="分贝毫瓦（dBm）"><a href="#分贝毫瓦（dBm）" class="headerlink" title="分贝毫瓦（dBm）"></a>分贝毫瓦（dBm）</h5><h6 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h6><p>功率值与1mW进行比较的dB值结果</p>
-<h6 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h6><blockquote>
-<p>dB power= 10 * log（实际毫瓦功率/1mW）</p>
-</blockquote>
-<p>  假设我买了一个100mW功率的无线网卡，则：</p>
-<blockquote>
-<p>10 <em> log （100mW/1mW）=10 </em>2= 20dBm</p>
-</blockquote>
-<h6 id="规律"><a href="#规律" class="headerlink" title="规律"></a>规律</h6><ul>
-<li>每增加3dBm，功率增加1倍；</li>
-<li>每增加10dBm，功率增加10倍；</li>
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/notebook-person-man-laptops.jpg" alt="Oracle notes"><br><strong>Some simple notes of Learning Oralce Database.</strong><br><a id="more"></a></p>
+<hr>
+<h4 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h4><h5 id="模糊查询"><a href="#模糊查询" class="headerlink" title="模糊查询"></a>模糊查询</h5><h6 id="BETWEEN-在某某之间"><a href="#BETWEEN-在某某之间" class="headerlink" title="BETWEEN: 在某某之间"></a>BETWEEN: 在某某之间</h6><p>如：显示工资在 1000～2000 之间的雇员信息。<br>输入并执行查询：</p>
+<pre><code>SELECT * FROM emp WHERE sal BETWEEN 1000 AND 2000;
+</code></pre><h6 id="IN-在某某之内"><a href="#IN-在某某之内" class="headerlink" title="IN: 在某某之内"></a>IN: 在某某之内</h6><p>如：显示职务为 <strong>“SALESMAN”，“CLERK” </strong> 和 <strong> “MANAGER” </strong> 的雇员信息。<br>输入并执行查询：</p>
+<pre><code>SELECT * FROM emp WHERE job IN (&apos;SALESMAN&apos;,&apos;CLERK&apos;,&apos;MANAGER&apos;);
+</code></pre><h6 id="LIKE-与通配符合用"><a href="#LIKE-与通配符合用" class="headerlink" title="LIKE: 与通配符合用"></a>LIKE: 与通配符合用</h6><p><small><strong>通配符</strong>：</small></p>
+<ul>
+<li>%：代表 0 个或任意个字符</li>
+<li>_：代表 1 个字符</li>
 </ul>
-<h5 id="全向天线辐射强度（dBi）"><a href="#全向天线辐射强度（dBi）" class="headerlink" title="全向天线辐射强度（dBi）"></a>全向天线辐射强度（dBi）</h5><h6 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h6><blockquote>
-<p>向<strong>四周所有方向</strong>辐射增强的功率强度</p>
+<p>如：  </p>
+<ol>
+<li><p>显示姓名以 “S” 开头的雇员信息。<br>输入并执行查询：</p>
+<pre><code>SELECT * FROM emp WHERE ename LIKE &apos;S%&apos;;
+</code></pre></li>
+<li><p>显示姓名第二个字符为 “A” 的雇员信息。<br>执行查询：</p>
+<pre><code>SELECT * FROM emp WHERE ename LIKE &apos;\_A%&apos;;
+</code></pre></li>
+</ol>
+<hr>
+<h5 id="空值查询"><a href="#空值查询" class="headerlink" title="空值查询"></a>空值查询</h5><blockquote>
+<p>空：is null<br>非空：is not null  </p>
 </blockquote>
-<h6 id="波形"><a href="#波形" class="headerlink" title="波形"></a>波形</h6><p>形似甜甜圈</p>
-<h5 id="定向天线辐射强度（dBd）"><a href="#定向天线辐射强度（dBd）" class="headerlink" title="定向天线辐射强度（dBd）"></a>定向天线辐射强度（dBd）</h5><h6 id="概念-3"><a href="#概念-3" class="headerlink" title="概念"></a>概念</h6><blockquote>
-<p>向某一特定方向辐射增强的功率强度。</p>
+<p>如：查询奖金为空的雇员信息  </p>
+<pre><code>select * from emp where comm is null;
+</code></pre><hr>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><h5 id="数学函数"><a href="#数学函数" class="headerlink" title="数学函数"></a>数学函数</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th>功能</th>
+<th>实例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">abs()</td>
+<td>求绝对值函数</td>
+<td>abs(-5)</td>
+<td>5</td>
+</tr>
+<tr>
+<td style="text-align:left">sqrt()</td>
+<td>求平方根函数</td>
+<td>sqrt(2)</td>
+<td>1.41421356</td>
+</tr>
+<tr>
+<td style="text-align:left">power()</td>
+<td>求幂函数</td>
+<td>power(2,3)</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>如：  </p>
+<ol>
+<li><p>使用求绝对值函数 <code>abs</code></p>
+<pre><code>SELECT abs(-5) FROM dual;
+</code></pre></li>
+<li><p>使用求平方根函数 <code>sqrt</code></p>
+<pre><code>SELECT sqrt(2) FROM dual;
+</code></pre></li>
+<li><p>使用 <code>ceil</code> 函数  </p>
+<pre><code>SELECT ceil(2.35) FROM dual;
+</code></pre></li>
+<li><p>使用 <code>floor</code> 函数  </p>
+<pre><code>SELECT floor(2.35) FROM dual;
+</code></pre></li>
+</ol>
+<hr>
+<h5 id="使用四舍五入函数-round"><a href="#使用四舍五入函数-round" class="headerlink" title="使用四舍五入函数 round()"></a>使用四舍五入函数 round()</h5><p>格式：<code>round(数字，保留的位数)</code></p>
+<pre><code>SELECT  round(45.923,2), round(45.923,0), round(45.923,-1) FROM dual;
+</code></pre><hr>
+<h5 id="字符型函数"><a href="#字符型函数" class="headerlink" title="字符型函数"></a>字符型函数</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">函数名</th>
+<th>功能</th>
+<th>实例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ascii</td>
+<td>获得字符的ASCII码</td>
+<td>Ascii(‘A’)</td>
+<td>65</td>
+</tr>
+<tr>
+<td style="text-align:left">chr</td>
+<td>返回与ASCII码相应的字符</td>
+<td>Chr(65)</td>
+<td>A</td>
+</tr>
+<tr>
+<td style="text-align:left">lower</td>
+<td>将字符串转换成小写</td>
+<td>lower(‘SQL Course’)</td>
+<td>sql course</td>
+</tr>
+<tr>
+<td style="text-align:left">upper</td>
+<td>将字符串转换成大写</td>
+<td>upper(‘SQL Course’)</td>
+<td>SQL COURSE</td>
+</tr>
+<tr>
+<td style="text-align:left">initcap</td>
+<td>将字符串转换成每个单词以大写开头</td>
+<td>initcap(‘SQL course’)</td>
+<td>Sql Course</td>
+</tr>
+<tr>
+<td style="text-align:left">concat</td>
+<td>连接两个字符串</td>
+<td>concat(‘SQL’, ‘ Course’)</td>
+<td>SQL Course</td>
+</tr>
+<tr>
+<td style="text-align:left">substr</td>
+<td>给出起始位置和长度，返回子字符串</td>
+<td>substr(‘String’,1,3)</td>
+<td>Str</td>
+</tr>
+<tr>
+<td style="text-align:left">length</td>
+<td>求字符串的长度</td>
+<td>length(‘Wellcom’)</td>
+<td>7</td>
+</tr>
+<tr>
+<td style="text-align:left">trim</td>
+<td>在一个字符串中去除另一个字符串</td>
+<td>trim(‘S’ FROM ‘SSMITH’)</td>
+<td>MITH</td>
+</tr>
+<tr>
+<td style="text-align:left">replace</td>
+<td>用一个字符串替换另一个字符串中的子字符串</td>
+<td>replace(‘ABC’, ‘B’, ‘D’)</td>
+<td>ADC</td>
+</tr>
+</tbody>
+</table>
+<p><br><br>如：  </p>
+<ol>
+<li><p>如果不知道表的字段内容是大写还是小写，可以转换后比较。<br>输入并执行查询：</p>
+<pre><code>SELECT  empno, ename, deptno
+    FROM emp
+    WHERE  lower(ename) = &apos;blake&apos;;
+</code></pre></li>
+<li><p>显示名称以“W”开头的雇员，并将名称转换成以大写开头。<br>输入并执行查询：</p>
+<pre><code>SELECT empno,initcap(ename),job
+    FROM emp
+    WHERE substr(ename,1,1) = &apos;W&apos;;
+</code></pre></li>
+<li><p>显示雇员名称中包含 “S” 的雇员名称及名称长度。<br>输入并执行查询：</p>
+<pre><code>SELECT empno,ename,length(ename)
+    FROM emp
+    WHERE instr(ename, &apos;S&apos;, 1, 1)&gt;0;
+</code></pre></li>
+</ol>
+<hr>
+<h5 id="日期型函数"><a href="#日期型函数" class="headerlink" title="日期型函数"></a>日期型函数</h5><blockquote>
+<p><strong>Oracle</strong> 使用内部数字格式来保存时间和日期，包括世纪、年、月、日、小时、分、秒。缺省日期<br>格式为 <code>DD-MON-YY</code>。<strong>SYSDATE</strong> 是返回系统日期和时间的虚列函数。</p>
 </blockquote>
-<h6 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h6><p>增益过高的全向天线会变成不规则定向天线。</p>
-<h6 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h6><ul>
-<li><strong>a</strong>. 双四边形<br>在功率相同时，定向天线比全向天线传输距离更远。</li>
-<li><strong>b</strong>. 八木天线<br>引向反射信号</li>
-<li><strong>c</strong>. 平面天线</li>
-<li><strong>d</strong>. 扇形天线<br>辐射一个扇形的局域，可以多个扇形实现全向信号覆盖，常用于移动电话网络。</li>
-<li><strong>e</strong>. 120度扇形天线</li>
-<li><strong>f</strong>. 网状天线<br>射束带宽更加集中，功率更强。</li>
-</ul>
+<p>如:<br><code>08-05月-03</code> 代表 2003 年 5 月 8 日。  </p>
 </span>
       
     </div>
@@ -459,7 +598,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/无线网络/" rel="tag">#无线网络</a>
+            <a href="/tags/Oracle/" rel="tag">#Oracle</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
         </div>
       
@@ -468,13 +609,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/第四章-无线网络协议栈/" rel="prev">第四章 无线网络协议栈</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/28/第二章-无线网络运行模式/" rel="next">第二章 无线网络运行模式</a>
+              <a href="/2017/09/19/Oracle-笔记——数据查询/" rel="next">第三章、Oracle 笔记——数据查询</a>
             
           </div>
         </div>
@@ -742,7 +881,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#分贝（dB）"><span class="nav-number">1.</span> <span class="nav-text">分贝（dB）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#概念"><span class="nav-number">1.1.</span> <span class="nav-text">概念</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#分贝毫瓦（dBm）"><span class="nav-number">2.</span> <span class="nav-text">分贝毫瓦（dBm）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#概念-1"><span class="nav-number">2.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#计算公式"><span class="nav-number">2.2.</span> <span class="nav-text">计算公式</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#规律"><span class="nav-number">2.3.</span> <span class="nav-text">规律</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#全向天线辐射强度（dBi）"><span class="nav-number">3.</span> <span class="nav-text">全向天线辐射强度（dBi）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#概念-2"><span class="nav-number">3.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#波形"><span class="nav-number">3.2.</span> <span class="nav-text">波形</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#定向天线辐射强度（dBd）"><span class="nav-number">4.</span> <span class="nav-text">定向天线辐射强度（dBd）</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#概念-3"><span class="nav-number">4.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#缺点"><span class="nav-number">4.2.</span> <span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#类型"><span class="nav-number">4.3.</span> <span class="nav-text">类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#条件查询"><span class="nav-number">1.</span> <span class="nav-text">条件查询</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#模糊查询"><span class="nav-number">1.1.</span> <span class="nav-text">模糊查询</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#BETWEEN-在某某之间"><span class="nav-number">1.1.1.</span> <span class="nav-text">BETWEEN: 在某某之间</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#IN-在某某之内"><span class="nav-number">1.1.2.</span> <span class="nav-text">IN: 在某某之内</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#LIKE-与通配符合用"><span class="nav-number">1.1.3.</span> <span class="nav-text">LIKE: 与通配符合用</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#空值查询"><span class="nav-number">1.2.</span> <span class="nav-text">空值查询</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数"><span class="nav-number">2.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数学函数"><span class="nav-number">2.1.</span> <span class="nav-text">数学函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#使用四舍五入函数-round"><span class="nav-number">2.2.</span> <span class="nav-text">使用四舍五入函数 round()</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#字符型函数"><span class="nav-number">2.3.</span> <span class="nav-text">字符型函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#日期型函数"><span class="nav-number">2.4.</span> <span class="nav-text">日期型函数</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -805,9 +944,9 @@
 
   <script type="text/javascript">
     var disqus_shortname = 'xxx';
-    var disqus_identifier = '2017/07/28/第三章-无线技术的常用概念/';
-    var disqus_title = '第三章  无线技术的常用概念';
-    var disqus_url = 'http://yoursite.com/2017/07/28/第三章-无线技术的常用概念/';
+    var disqus_identifier = '2017/10/22/Oracle-条件查询与函数/';
+    var disqus_title = '第四章、Oracle-条件查询与函数';
+    var disqus_url = 'http://yoursite.com/2017/10/22/Oracle-条件查询与函数/';
 
     function run_disqus_script(disqus_script){
       var dsq = document.createElement('script');
