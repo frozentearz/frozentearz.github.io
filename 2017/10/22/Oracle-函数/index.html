@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="Sharing," />
+  <meta name="keywords" content="笔记,Oracle," />
 
 
 
@@ -40,22 +40,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="A little thinking about learning.">
-<meta name="keywords" content="Sharing">
+<meta name="description" content="Some simple notes of Learning Oralce Database.">
+<meta name="keywords" content="笔记,Oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对于学习深与广的看法">
-<meta property="og:url" content="http://yoursite.com/2017/07/28/对于学习深与广的看法/index.html">
+<meta property="og:title" content="第五章、Oracle-函数">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/Oracle-函数/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
-<meta property="og:description" content="A little thinking about learning.">
+<meta property="og:description" content="Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/Learning.jpg">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/Books.jpg">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1926356-1a073deb75a9bb8d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-10-21T16:28:43.506Z">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/black-and-white-image-of-laptop-computer-keyboard-mobile-phone-and-headphones.jpg">
+<meta property="og:updated_time" content="2017-10-21T21:28:04.844Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对于学习深与广的看法">
-<meta name="twitter:description" content="A little thinking about learning.">
-<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/Learning.jpg">
+<meta name="twitter:title" content="第五章、Oracle-函数">
+<meta name="twitter:description" content="Some simple notes of Learning Oralce Database.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/black-and-white-image-of-laptop-computer-keyboard-mobile-phone-and-headphones.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -65,7 +63,7 @@
   };
 </script>
 
-  <title> 对于学习深与广的看法 | Frazier's World </title>
+  <title> 第五章、Oracle-函数 | Frazier's World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -371,7 +369,7 @@
           
           
             
-              对于学习深与广的看法
+              第五章、Oracle-函数
             
           
         </h1>
@@ -380,8 +378,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2017-07-28T23:54:37+08:00" content="2017-07-28">
-            2017-07-28
+          <time itemprop="dateCreated" datetime="2017-10-22T04:18:59+08:00" content="2017-10-22">
+            2017-10-22
           </time>
         </span>
 
@@ -390,8 +388,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/sharing/" itemprop="url" rel="index">
-                  <span itemprop="name">sharing</span>
+                <a href="/categories/Oracle/" itemprop="url" rel="index">
+                  <span itemprop="name">Oracle</span>
                 </a>
               </span>
 
@@ -406,8 +404,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2017/07/28/对于学习深与广的看法/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/28/对于学习深与广的看法/" itemprop="commentsCount"></span>
+            <a href="/2017/10/22/Oracle-函数/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/22/Oracle-函数/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -421,33 +419,107 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/Learning.jpg" alt="Deep Thinking"><br><strong>A little thinking about learning.</strong><br><a id="more"></a></p>
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/black-and-white-image-of-laptop-computer-keyboard-mobile-phone-and-headphones.jpg" alt="Oracle notes"><br><strong>Some simple notes of Learning Oralce Database.</strong><br><a id="more"></a></p>
 <hr>
-<blockquote>
-<p>“光想是没有用的，先把自己该做的做好。” </p>
-<p>——某学长</p>
+<h4 id="日期型函数"><a href="#日期型函数" class="headerlink" title="日期型函数"></a>日期型函数</h4><blockquote>
+<p><strong>Oracle</strong> 使用内部数字格式来保存时间和日期，包括世纪、年、月、日、小时、分、秒。缺省日期<br>格式为 <code>DD-MON-YY</code>。<strong>SYSDATE</strong> 是返回系统日期和时间的虚列函数。  </p>
 </blockquote>
-<p>笔者有一个嗜好，收集一些个人认为很实用的东西，比如：</p>
-<ul>
-<li>一些质量好、内容又多的网站（菜鸟教程、W3cSchool etc…）</li>
-<li>一些很著名的开发者交流场所（Github、Stack OverFlow、知乎 etc…）</li>
-<li>一些质量非常好、用户体验也很棒的App（中国大学Mooc、知乎、掘金、Pocket、Forest、微习惯 etc..）</li>
-<li>…</li>
-</ul>
-<p>但是我平时会用到的也就是那么印象“稍微”深刻的几个。感觉有点<del>【暴殄天物】</del> 浪费书签栏。</p>
-<p><img src="http://otdo5q3gt.bkt.clouddn.com/Books.jpg" alt="Books" title="生活的很美好的！前提是你要有深度地去探索。"></p>
-<p>到头来收集了这么多，事实上并没有什么卵用，<strong>自己并没有什么实质性的进步提升</strong>。</p>
-<p>为啥呢？<br><strong>因为我只顾及到广度，却缺乏了深度。</strong></p>
-<p>当一大堆的优秀作品放到一块时，曾经的“优秀”就已经“泯然众人矣”。<br><strong>那么，何不抛弃其他，专心研究其中之一呢？</strong></p>
-<p>学习亦是如此。早在半年前的军训之后那段时间，刚刚进入大学，跟大多数人一样觉得自己自由了。不止是行动上的自由，专业上可以学的方向也太多了。</p>
-<p>当时就觉得很迷茫，到底学哪个比较好？</p>
-<p>后来，一个大四的学长给我建议：</p>
-<blockquote>
-<p>“光想是没有用的，先把自己该做的做好。”</p>
+<p>如:<br><code>08-05月-03</code> 代表 2003 年 5 月 8 日。  </p>
+<h5 id="SYSDATE：返回系统日期和时间的虚列函数。"><a href="#SYSDATE：返回系统日期和时间的虚列函数。" class="headerlink" title="SYSDATE：返回系统日期和时间的虚列函数。"></a>SYSDATE：返回系统日期和时间的虚列函数。</h5><p>如：返回系统的当前日期。<br>输入并执行查询：</p>
+<pre><code>SELECT sysdate FROM dual;
+</code></pre><hr>
+<h5 id="对两个日期相减，得到相隔天数。"><a href="#对两个日期相减，得到相隔天数。" class="headerlink" title="对两个日期相减，得到相隔天数。"></a>对两个日期相减，得到相隔天数。</h5><p>通过加小时来增加天数，24 小时为一天，如 12 小时可以写成 12/24 (或 0.5 )。<br>如：<br>假定当前的系统日期是 2003 年 2 月 6 日，求再过 1000 天的日期。<br>输入并执行查询：</p>
+<pre><code>SELECT sysdate+1000 AS &quot;NEW DATE&quot; FROM dual;
+</code></pre><p>两个日期相减</p>
+<pre><code>select to_date(&apos;1-1月-2000&apos;) - to_date(&apos;1-8月-1999&apos;) from dual;
+</code></pre><hr>
+<h5 id="其它日期函数"><a href="#其它日期函数" class="headerlink" title="其它日期函数"></a>其它日期函数</h5><table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th>功能</th>
+<th>实例</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">months_between</td>
+<td>返回两个日期间的月份</td>
+<td>months_between (‘04-11月-05’,’11-1月-01’)</td>
+<td>57.7741935</td>
+</tr>
+<tr>
+<td style="text-align:left">add_months</td>
+<td>返回把月份数加到日期上的新日期</td>
+<td>add_months(‘06-2月-03’,1) add_months(‘06-2月-03’,-1)</td>
+<td>06-3月-03 06-1月-03</td>
+</tr>
+<tr>
+<td style="text-align:left">next_day</td>
+<td>返回指定日期后的星期对应的新日期</td>
+<td>next_day(‘06-2月-03’,’星期一’)</td>
+<td>10-2月-03</td>
+</tr>
+<tr>
+<td style="text-align:left">last_day</td>
+<td>返回指定日期所在的月的最后一天</td>
+<td>last_day(‘06-2月-03’)</td>
+<td>28-2月-03</td>
+</tr>
+<tr>
+<td style="text-align:left">round</td>
+<td>行四舍五入</td>
+<td>round(to_date(‘13-2月-03’),’YEAR’) <br> round(to_date(‘13-2月-03’),’MONTH’) <br> round(to_date(‘13-2月-03’),’DAY’)</td>
+<td>01-1月-03 <br> 01-2月-03 <br> 16-2月-03</td>
+</tr>
+</tbody>
+</table>
+<p>(按照四舍五入)<br>如：<br>返回 2003 年 2 月的最后一天。<br>输入并执行查询：</p>
+<pre><code>SELECT last_day(&apos;08-2月-03&apos;) FROM dual;
+</code></pre><p>假定当前的系统日期是 2003 年 2 月 6 日，显示部门 10 雇员的雇佣天数。<br>输入并执行查询：</p>
+<pre><code>SELECT ename, round(sysdate-hiredate) DAYS
+    FROM   emp
+    WHERE  deptno = 10;
+</code></pre><hr>
+<h4 id="转换函数"><a href="#转换函数" class="headerlink" title="转换函数"></a>转换函数</h4><h5 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h5><pre><code>SELECT &apos;12.5&apos;+11 FROM dual;
+</code></pre><p>结果为：<code>23.5</code></p>
+<pre><code>Select  ‘12.5’||11 from dual;
+</code></pre><p>结果为：<code>12.511</code></p>
+<hr>
+<h5 id="日期类型转换"><a href="#日期类型转换" class="headerlink" title="日期类型转换"></a>日期类型转换</h5><h6 id="日期型转字符型"><a href="#日期型转字符型" class="headerlink" title="日期型转字符型"></a>日期型转字符型</h6><p>将日期转换成带时间和星期的字符串并显示。<br>执行以下查询：</p>
+<pre><code>SELECT TO_CHAR(sysdate,&apos;YYYY-MM-DD HH24:MI:SS AM DY&apos;) FROM dual;
+</code></pre><p>将日期显示转换成中文的年月日。<br>输入并执行查询：</p>
+<pre><code>SELECT TO_CHAR(sysdate,&apos;YYYY&quot;年&quot;MM&quot;月&quot;DD&quot;日&quot;&apos;) FROM dual;
+</code></pre><hr>
+<h6 id="字符型转日期型"><a href="#字符型转日期型" class="headerlink" title="字符型转日期型"></a>字符型转日期型</h6><p>往<code>emp</code>表中插入一条记录</p>
+<pre><code>insert into emp
+    values(8888,&apos;张三&apos;,&apos;CLERK&apos;,7369,to_date(&apos;1-1月-2000&apos;),1000,10,10);
+
+insert into emp
+    values(8889,&apos;李四&apos;,&apos;CLERK&apos;,7369,to_date(&apos;2000-01-01&apos;,&apos;YYYY-MM-DD&apos;),1000,10,10);
+</code></pre><hr>
+<h4 id="其他常用函数"><a href="#其他常用函数" class="headerlink" title="其他常用函数"></a>其他常用函数</h4><h5 id="空值的转换"><a href="#空值的转换" class="headerlink" title="空值的转换"></a>空值的转换</h5><blockquote>
+<p>如果对空值NULL不能很好的处理，就会在查询中出现一些问题。在一个空值上进行算术运算的结果都是NULL。  </p>
+<p>最典型的例子是，在查询雇员表时，将工资sal字段和津贴字段comm进行相加，如果津贴为空，则相加结果也为空，这样容易引起误解。</p>
+<p>使用nvl函数，可以转换NULL为实际值。该函数判断字段的内容，如果不为空，返回原值；为空，则返回给定的值。  </p>
 </blockquote>
-<p>于是就选择了自己的专业Java，一心想把专业学好。<br>因为就业的时候你必须以某一些项技能为主，其他为辅。<br>计算机领域很广，又分为大大小小不同的方向，有软件开发的，有软件测试的，有人工智能的，有信息安全的，有网站搭建的，等等……<br>一个人不可能把这些都精通，只能擅长某些领域，涉及某些领域。<br>有很多新人刚刚开始学的时候兴趣很大，又想学这个又想学那个，最后每一种都只学会了皮毛。</p>
-<p>不知道如何选择的时候，付诸行动比选择更重要。先精通某些再涉猎其他更有用。<br><img src="http://upload-images.jianshu.io/upload_images/1926356-1a073deb75a9bb8d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Funny" title="某种程度上这算是学的广又学不深的典型代表"></p>
-<p><strong>——致曾经迷茫过的我</strong></p>
+<p>如下3个函数，分别用新内容代替字段的空值：  </p>
+<ol>
+<li>nvl(comm, 0)：用 0 代替空的 Comm 值。</li>
+<li>nvl(hiredate, ‘01-1月-97’)：用 1997 年 1 月 1 日代替空的雇佣日期。</li>
+<li>nvl(job, ‘无’)：用“无”代替空的职务。</li>
+</ol>
+<p>使用nvl函数转换空值。<br>执行以下查询：</p>
+<pre><code>SELECT ename,nvl(job,&apos;无&apos;),nvl(hiredate,&apos;01-1月-97&apos;),nvl(comm,0)
+    FROM emp;
+</code></pre><hr>
+<h5 id="decode函数"><a href="#decode函数" class="headerlink" title="decode函数"></a>decode函数</h5><p>decode函数可以通过比较进行内容的转换，完成的功能相当于分支语句。<br>在参数的最后位置上可以存在单独的参数，如果以上比较过程没有找到匹配值，则返回该参数的值，如果不存在该参数，则返回NULL。</p>
+<p>将职务转换成中文显示。<br>执行以下查询：</p>
+<pre><code>SELECT ename,decode(job, &apos;MANAGER&apos;, &apos;经理&apos;, &apos;CLERK&apos;,&apos;职员&apos;, &apos;SALESMAN&apos;,&apos;推销员&apos;, &apos;ANALYST&apos;,&apos;系统分析员&apos;,&apos;未知&apos;)
+    FROM emp;
+</code></pre><hr>
+<h5 id="最大、最小值函数"><a href="#最大、最小值函数" class="headerlink" title="最大、最小值函数"></a>最大、最小值函数</h5><p>greatest 返回参数列表中的最大值，least 返回参数列表中的最小值。<br>如果表达式中有NULL，则返回NULL。</p>
 </span>
       
     </div>
@@ -456,7 +528,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Sharing/" rel="tag">#Sharing</a>
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/Oracle/" rel="tag">#Oracle</a>
           
         </div>
       
@@ -465,13 +539,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/17/Oracle-setup-笔记/" rel="prev">第一章、Oracle 笔记——Setup</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/28/第五章-802-11-头部/" rel="next">第五章 802.11 头部</a>
+              <a href="/2017/10/22/Oracle-条件查询与函数/" rel="next">第四章、Oracle-条件查询与函数</a>
             
           </div>
         </div>
@@ -739,7 +811,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#日期型函数"><span class="nav-number">1.</span> <span class="nav-text">日期型函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SYSDATE：返回系统日期和时间的虚列函数。"><span class="nav-number">1.1.</span> <span class="nav-text">SYSDATE：返回系统日期和时间的虚列函数。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对两个日期相减，得到相隔天数。"><span class="nav-number">1.2.</span> <span class="nav-text">对两个日期相减，得到相隔天数。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其它日期函数"><span class="nav-number">1.3.</span> <span class="nav-text">其它日期函数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转换函数"><span class="nav-number">2.</span> <span class="nav-text">转换函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#自动类型转换"><span class="nav-number">2.1.</span> <span class="nav-text">自动类型转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#日期类型转换"><span class="nav-number">2.2.</span> <span class="nav-text">日期类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#日期型转字符型"><span class="nav-number">2.2.1.</span> <span class="nav-text">日期型转字符型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#字符型转日期型"><span class="nav-number">2.2.2.</span> <span class="nav-text">字符型转日期型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他常用函数"><span class="nav-number">3.</span> <span class="nav-text">其他常用函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#空值的转换"><span class="nav-number">3.1.</span> <span class="nav-text">空值的转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#decode函数"><span class="nav-number">3.2.</span> <span class="nav-text">decode函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#最大、最小值函数"><span class="nav-number">3.3.</span> <span class="nav-text">最大、最小值函数</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -802,9 +874,9 @@
 
   <script type="text/javascript">
     var disqus_shortname = 'xxx';
-    var disqus_identifier = '2017/07/28/对于学习深与广的看法/';
-    var disqus_title = '对于学习深与广的看法';
-    var disqus_url = 'http://yoursite.com/2017/07/28/对于学习深与广的看法/';
+    var disqus_identifier = '2017/10/22/Oracle-函数/';
+    var disqus_title = '第五章、Oracle-函数';
+    var disqus_url = 'http://yoursite.com/2017/10/22/Oracle-函数/';
 
     function run_disqus_script(disqus_script){
       var dsq = document.createElement('script');
