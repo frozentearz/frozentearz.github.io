@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="无线网络," />
+  <meta name="keywords" content="Oracle,笔记," />
 
 
 
@@ -40,21 +40,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="概念， IEEE组织， 无线协议， 常用标准， 802.11 标准， 媒体访问方式， RTS/CTS协议， 计算公式， 802.11 bagn 标准.">
-<meta name="keywords" content="无线网络">
+<meta name="description" content="Some simple notes of Learning Oralce Database.">
+<meta name="keywords" content="Oracle,笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一章 无线网络协议">
-<meta property="og:url" content="http://yoursite.com/2017/07/13/第一章-无线网络协议/index.html">
+<meta property="og:title" content="第六章、Oracle-联合查询">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/Oracle-联合查询/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
-<meta property="og:description" content="概念， IEEE组织， 无线协议， 常用标准， 802.11 标准， 媒体访问方式， RTS/CTS协议， 计算公式， 802.11 bagn 标准.">
+<meta property="og:description" content="Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/communication1.jpg">
-<meta property="og:image" content="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/50da81cb39dbb6fd0776affe0e24ab18972b373c.jpg">
-<meta property="og:updated_time" content="2017-10-21T16:49:45.037Z">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/monitor-laptop-computer.jpg">
+<meta property="og:updated_time" content="2017-10-22T04:25:50.704Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第一章 无线网络协议">
-<meta name="twitter:description" content="概念， IEEE组织， 无线协议， 常用标准， 802.11 标准， 媒体访问方式， RTS/CTS协议， 计算公式， 802.11 bagn 标准.">
-<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/communication1.jpg">
+<meta name="twitter:title" content="第六章、Oracle-联合查询">
+<meta name="twitter:description" content="Some simple notes of Learning Oralce Database.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/monitor-laptop-computer.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -64,7 +63,7 @@
   };
 </script>
 
-  <title> 第一章 无线网络协议 | Frazier's World </title>
+  <title> 第六章、Oracle-联合查询 | Frazier's World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -370,7 +369,7 @@
           
           
             
-              第一章 无线网络协议
+              第六章、Oracle-联合查询
             
           
         </h1>
@@ -379,8 +378,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2017-07-13T09:26:22+08:00" content="2017-07-13">
-            2017-07-13
+          <time itemprop="dateCreated" datetime="2017-10-22T12:07:19+08:00" content="2017-10-22">
+            2017-10-22
           </time>
         </span>
 
@@ -389,8 +388,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/wlan/" itemprop="url" rel="index">
-                  <span itemprop="name">wlan</span>
+                <a href="/categories/Oracle/" itemprop="url" rel="index">
+                  <span itemprop="name">Oracle</span>
                 </a>
               </span>
 
@@ -405,8 +404,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2017/07/13/第一章-无线网络协议/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/13/第一章-无线网络协议/" itemprop="commentsCount"></span>
+            <a href="/2017/10/22/Oracle-联合查询/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/22/Oracle-联合查询/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -420,111 +419,37 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/communication1.jpg" alt="Wlan"><br><strong>概念， IEEE组织， 无线协议， 常用标准， 802.11 标准， 媒体访问方式， RTS/CTS协议， 计算公式， 802.11 bagn 标准.</strong><br><a id="more"></a></p>
-<h5 id="简单概念"><a href="#简单概念" class="headerlink" title="简单概念"></a>简单概念</h5><table>
-<thead>
-<tr>
-<th>Code</th>
-<th>中文名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>LAN</td>
-<td>局域网</td>
-</tr>
-<tr>
-<td>WLAN</td>
-<td>无线局域网</td>
-</tr>
-<tr>
-<td>MAN</td>
-<td>城域网</td>
-</tr>
-<tr>
-<td>PAN</td>
-<td>个人局域网（包含蓝牙技术）</td>
-</tr>
-</tbody>
-</table>
-<h5 id="IEEE组织"><a href="#IEEE组织" class="headerlink" title="IEEE组织"></a>IEEE组织</h5><blockquote>
-<p>一个由大批科学家为规定标准而组成的技术委员会，其中包括<strong>802委员会</strong>，其中，<strong>802委员</strong>会负责 <strong>LAN</strong>、<strong>MAN</strong>、以太网，令牌环网、网桥…</p>
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/monitor-laptop-computer.jpg" alt="Oracle notes"><br><strong>Some simple notes of Learning Oralce Database.</strong><br><a id="more"></a></p>
+<hr>
+<h4 id="相等连接（内连接）"><a href="#相等连接（内连接）" class="headerlink" title="相等连接（内连接）"></a>相等连接（内连接）</h4><h5 id="常规模式"><a href="#常规模式" class="headerlink" title="常规模式"></a>常规模式</h5><ul>
+<li>先列出要显示的列</li>
+<li>列出查询的表</li>
+<li>列出多表相连条件（主外键）  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select ename,job,sal,comm,emp.deptno,dname</div><div class="line">    from emp,dept</div><div class="line">    where emp.deptno = dept.deptno</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>注意：如果两个表有同名列，那么前面必须接表名 如：emp.deptno. 如果不是同名字段则表名可以省略</p>
 </blockquote>
-<h5 id="无线协议"><a href="#无线协议" class="headerlink" title="无线协议"></a>无线协议</h5><p>无线协议即指 <strong>IEEE 802.11协议</strong>，它工作在<strong>数据链路层、物理层</strong>。</p>
-<h5 id="常用标准"><a href="#常用标准" class="headerlink" title="常用标准"></a>常用标准</h5><p><strong>802.11 b/a/n/g/i</strong></p>
-<ul>
-<li>802.11 i：安全方面的标准</li>
-<li>802.11 a： 5GHz，最大54MBit/s&lt;7M/s</li>
-<li>802.11 b：2.4GHz，最大5.5Mbit/s and 11Mbit/s  (别名：<strong>WIFI</strong>) （2.4GHz - 2.485Ghz）</li>
-<li>802.11 g：2.4GHz，兼容802.11 b，速度可达54Mbit/s</li>
-<li>802.11 n：最常用，最高600MBit/s ==&gt; 75M/s</li>
+<hr>
+<h5 id="Inner-join-模式"><a href="#Inner-join-模式" class="headerlink" title="Inner join 模式:"></a>Inner join 模式:</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select ename,job,sal,comm,emp.deptno,dname</div><div class="line">    from emp inner join dept</div><div class="line">    on emp.deptno = dept.deptno</div></pre></td></tr></table></figure>
+<hr>
+<h5 id="三表或三表以上的写法"><a href="#三表或三表以上的写法" class="headerlink" title="三表或三表以上的写法"></a>三表或三表以上的写法</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select [字段1], [字段2], [...]</div><div class="line">    from [表1], [表2], [...]</div><div class="line">    where [表1.外键] = [表2.主键]  and [表1.外键] = [表3.主键] and [...]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：两个表有一个条件 ，三个表有两个条件 ，四个表有三个条件 以此类推</p>
+</blockquote>
+<hr>
+<h4 id="外连接-不等连接"><a href="#外连接-不等连接" class="headerlink" title="外连接(不等连接)"></a>外连接(不等连接)</h4><blockquote>
+<p>左外连接即在内连接的基础上，左边表中有但右边表中没有的记录也以null的形式显示出来，右外连接则反之</p>
+</blockquote>
+<h5 id="Way-A"><a href="#Way-A" class="headerlink" title="Way A"></a>Way A</h5><ul>
+<li><p>右外连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select ename,d.deptno,dname</div><div class="line">    from emp e,dept d</div><div class="line">    where e.deptno(+) = d.deptno;</div></pre></td></tr></table></figure>
+</li>
+<li><p>左外连接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select ename,d.deptno,dname</div><div class="line">    from emp e,dept d</div><div class="line">    where d.deptno = e.deptno(+);</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h5 id="802-11标准"><a href="#802-11标准" class="headerlink" title="802.11标准"></a>802.11标准</h5><ul>
-<li>速率：1 - 2 mbps</li>
-<li>介质<br>① 红外线（失败）<br>② 无线射频</li>
-<li>编码方式<br>DSSS：直序扩频<br>FHSS：跳频扩频<br><br></li>
-</ul>
-<h5 id="媒体访问方式"><a href="#媒体访问方式" class="headerlink" title="媒体访问方式"></a>媒体访问方式</h5><p><strong>802 . 11：CSMA/CA</strong>（防冲突）<br>只有频宽空闲时，采用退避算法进行发发送数据包。</p>
-<table>
-<thead>
-<tr>
-<th>Codes</th>
-<th>中文名</th>
-<th>应用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CSMA/CD</td>
-<td>载波侦听多路访问/冲突检测</td>
-<td>以太网</td>
-</tr>
-<tr>
-<td>CSMA/CA</td>
-<td>载波侦听多路访问/冲突避免</td>
-<td><strong>802.11</strong>协议</td>
-</tr>
-<tr>
-<td>CSMA/BA</td>
-<td>载波侦听多路访问/位仲裁</td>
-<td>———</td>
-</tr>
-<tr>
-<td>CSMA/CP</td>
-<td>载波侦听多路访问/载波优先</td>
-<td><img src="https://gss0.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/50da81cb39dbb6fd0776affe0e24ab18972b373c.jpg" alt=""></td>
-</tr>
-</tbody>
-</table>
-<h5 id="RTS-CTS协议-（Request-to-Send-Clear-to-Send）"><a href="#RTS-CTS协议-（Request-to-Send-Clear-to-Send）" class="headerlink" title="RTS/CTS协议 （Request to Send/Clear to Send）"></a>RTS/CTS协议 （Request to Send/Clear to Send）</h5><p>在发送数据包之前发送一个RTS包，局域网其他设备停止发包，等本机数据包发送完毕时，再发送一个CTS包，局域网其他设备继续通信。</p>
-<h5 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h5><p>c = b + log2 (1 + s/n)<br>c——传输的信息量<br>b——频宽<br>s/n——信号强度/噪声强度——信噪比<br><br></p>
-<h5 id="802-11b-标准"><a href="#802-11b-标准" class="headerlink" title="802.11b 标准"></a>802.11b 标准</h5><p>802.11的增强版，增加了CCK（补充代码键）</p>
-<ul>
-<li>速率：5.5Mbit/s and 11Mbit/s</li>
-<li>带宽：22MHz</li>
-<li>频率：2.4Ghz - 2.485GHz<br>共覆盖 <strong>0.085GHz（85MHz）</strong>，<strong>802.11b</strong>信道规定带宽是<strong>22MHz</strong>，<strong>88MHz</strong>只够分三个信道。<br>但是，各国利用信道之间的重叠，覆盖，交叉，可以分为11/13/14个信道。<br>美国标准：11个信道<br>欧洲/中国标准：13个信道<br>日本标准：14个信道<br>每个信道的中间值间隔为5MHz</li>
-</ul>
-<h5 id="802-11a-标准"><a href="#802-11a-标准" class="headerlink" title="802.11a 标准"></a>802.11a 标准</h5><ul>
-<li>频率：<strong>5GHz</strong></li>
-<li>编码方式：OFDM（正交频<strong>复用</strong>技术）</li>
-<li>最高速率：54Mbps</li>
-<li>带宽：20 MHz</li>
-<li>特点：<strong>变频</strong><br>① <strong>5.15-5.35GHz</strong> 适用用于室内<br>② <strong>5.7-5.8GHz</strong> 适用于室外 </li>
-</ul>
-<h5 id="802-11g-标准"><a href="#802-11g-标准" class="headerlink" title="802.11g 标准"></a>802.11g 标准</h5><p>基于 <strong>802.11b</strong></p>
-<ul>
-<li>频率：2.4GHz</li>
-<li>编码方式：OFDM</li>
-<li>速率：54Mbps（与802.11a相同）</li>
-<li>特点：<br>可全局降速：同时切换为CCK编码（设备中只要有一个部件不支持802.11g即降为802.11b）</li>
-<li>带宽：<strong>20/22MHz</strong></li>
-</ul>
-<h5 id="802-11n-标准"><a href="#802-11n-标准" class="headerlink" title="802.11n 标准"></a>802.11n 标准</h5><ul>
-<li>速率：300Mbs，最高可达 <strong>600Mbps</strong></li>
-<li>编码调节方式：<strong>MIMO多进多出</strong>通信技术（一般是四个进出口）</li>
-<li>带宽：<strong>40MHz（/20MHz），传输速率可翻倍。</strong></li>
-<li>特点：<strong>双向兼容 2.4 GHz/5GHz</strong></li>
-</ul>
+<h5 id="Way-B"><a href="#Way-B" class="headerlink" title="Way B"></a>Way B</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">select ename,d.deptno,dname</div><div class="line">    from emp e right join dept d</div><div class="line">    on e.deptno = d.deptno;</div></pre></td></tr></table></figure>
 </span>
       
     </div>
@@ -533,7 +458,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/无线网络/" rel="tag">#无线网络</a>
+            <a href="/tags/Oracle/" rel="tag">#Oracle</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
         </div>
       
@@ -542,13 +469,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/20/The-Shawshank-Redemption/" rel="prev">The Shawshank Redemption</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/11/MarkDown基础语法/" rel="next">MarkDown基础语法</a>
+              <a href="/2017/10/22/Oracle-函数/" rel="next">第五章、Oracle-函数</a>
             
           </div>
         </div>
@@ -816,7 +741,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#简单概念"><span class="nav-number">1.</span> <span class="nav-text">简单概念</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IEEE组织"><span class="nav-number">2.</span> <span class="nav-text">IEEE组织</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#无线协议"><span class="nav-number">3.</span> <span class="nav-text">无线协议</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#常用标准"><span class="nav-number">4.</span> <span class="nav-text">常用标准</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#802-11标准"><span class="nav-number">5.</span> <span class="nav-text">802.11标准</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#媒体访问方式"><span class="nav-number">6.</span> <span class="nav-text">媒体访问方式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#RTS-CTS协议-（Request-to-Send-Clear-to-Send）"><span class="nav-number">7.</span> <span class="nav-text">RTS/CTS协议 （Request to Send/Clear to Send）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#计算公式"><span class="nav-number">8.</span> <span class="nav-text">计算公式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#802-11b-标准"><span class="nav-number">9.</span> <span class="nav-text">802.11b 标准</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#802-11a-标准"><span class="nav-number">10.</span> <span class="nav-text">802.11a 标准</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#802-11g-标准"><span class="nav-number">11.</span> <span class="nav-text">802.11g 标准</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#802-11n-标准"><span class="nav-number">12.</span> <span class="nav-text">802.11n 标准</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#相等连接（内连接）"><span class="nav-number">1.</span> <span class="nav-text">相等连接（内连接）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常规模式"><span class="nav-number">1.1.</span> <span class="nav-text">常规模式</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Inner-join-模式"><span class="nav-number">1.2.</span> <span class="nav-text">Inner join 模式:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#三表或三表以上的写法"><span class="nav-number">1.3.</span> <span class="nav-text">三表或三表以上的写法</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#外连接-不等连接"><span class="nav-number">2.</span> <span class="nav-text">外连接(不等连接)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Way-A"><span class="nav-number">2.1.</span> <span class="nav-text">Way A</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Way-B"><span class="nav-number">2.2.</span> <span class="nav-text">Way B</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -879,9 +804,9 @@
 
   <script type="text/javascript">
     var disqus_shortname = 'xxx';
-    var disqus_identifier = '2017/07/13/第一章-无线网络协议/';
-    var disqus_title = '第一章 无线网络协议';
-    var disqus_url = 'http://yoursite.com/2017/07/13/第一章-无线网络协议/';
+    var disqus_identifier = '2017/10/22/Oracle-联合查询/';
+    var disqus_title = '第六章、Oracle-联合查询';
+    var disqus_url = 'http://yoursite.com/2017/10/22/Oracle-联合查询/';
 
     function run_disqus_script(disqus_script){
       var dsq = document.createElement('script');
