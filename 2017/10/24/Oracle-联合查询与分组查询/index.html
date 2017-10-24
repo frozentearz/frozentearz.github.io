@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="无线网络," />
+  <meta name="keywords" content="笔记,Oracle," />
 
 
 
@@ -40,20 +40,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="802.11 协议栈版本命令、无线网卡配置命令、扫描AP命令与 Monitor 模式.">
-<meta name="keywords" content="无线网络">
+<meta name="description" content="Some simple notes of Learning Oralce Database.">
+<meta name="keywords" content="笔记,Oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第四章 无线网络协议栈">
-<meta property="og:url" content="http://yoursite.com/2017/07/28/第四章-无线网络协议栈/index.html">
+<meta property="og:title" content="第七章、Oracle-联合查询与分组查询">
+<meta property="og:url" content="http://yoursite.com/2017/10/24/Oracle-联合查询与分组查询/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
-<meta property="og:description" content="802.11 协议栈版本命令、无线网卡配置命令、扫描AP命令与 Monitor 模式.">
+<meta property="og:description" content="Some simple notes of Learning Oralce Database.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/communication4.jpg">
-<meta property="og:updated_time" content="2017-10-21T16:29:26.946Z">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/table-pen-technology.jpg">
+<meta property="og:updated_time" content="2017-10-24T09:06:32.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第四章 无线网络协议栈">
-<meta name="twitter:description" content="802.11 协议栈版本命令、无线网卡配置命令、扫描AP命令与 Monitor 模式.">
-<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/communication4.jpg">
+<meta name="twitter:title" content="第七章、Oracle-联合查询与分组查询">
+<meta name="twitter:description" content="Some simple notes of Learning Oralce Database.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/table-pen-technology.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +63,7 @@
   };
 </script>
 
-  <title> 第四章 无线网络协议栈 | Frazier's World </title>
+  <title> 第七章、Oracle-联合查询与分组查询 | Frazier's World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -369,7 +369,7 @@
           
           
             
-              第四章 无线网络协议栈
+              第七章、Oracle-联合查询与分组查询
             
           
         </h1>
@@ -378,8 +378,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2017-07-28T20:03:46+08:00" content="2017-07-28">
-            2017-07-28
+          <time itemprop="dateCreated" datetime="2017-10-24T17:00:53+08:00" content="2017-10-24">
+            2017-10-24
           </time>
         </span>
 
@@ -388,8 +388,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/wlan/" itemprop="url" rel="index">
-                  <span itemprop="name">wlan</span>
+                <a href="/categories/Oracle/" itemprop="url" rel="index">
+                  <span itemprop="name">Oracle</span>
                 </a>
               </span>
 
@@ -404,8 +404,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2017/07/28/第四章-无线网络协议栈/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/07/28/第四章-无线网络协议栈/" itemprop="commentsCount"></span>
+            <a href="/2017/10/24/Oracle-联合查询与分组查询/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/24/Oracle-联合查询与分组查询/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -419,31 +419,94 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/communication4.jpg" alt="Wlan"><br><strong>802.11</strong> 协议栈版本命令、无线网卡配置命令、扫描AP命令与 <strong>Monitor</strong> 模式.<br><a id="more"></a></p>
-<h5 id="802-11-协议栈版本"><a href="#802-11-协议栈版本" class="headerlink" title="802.11 协议栈版本"></a>802.11 协议栈版本</h5><h6 id="Ieee80211版本"><a href="#Ieee80211版本" class="headerlink" title="Ieee80211版本"></a>Ieee80211版本</h6><ul>
-<li><strong>iwconfig</strong></li>
-<li><strong>iwlist</strong></li>
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/table-pen-technology.jpg" alt="Oracle notes"><br><strong>Some simple notes of Learning Oralce Database.</strong><br><a id="more"></a></p>
+<hr>
+<h4 id="不等连接"><a href="#不等连接" class="headerlink" title="不等连接"></a>不等连接</h4><p>拿一个表作为另一表的查询条件或范围</p>
+<p>如：显示雇员名称，工资和所属工资等级。<br>执行以下查询：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT e.ename, e.sal, s.grade</div><div class="line">    FROM emp e,salgrade s</div><div class="line">    WHERE e.sal BETWEEN s.losal AND s.hisal</div></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="自连接"><a href="#自连接" class="headerlink" title="自连接"></a>自连接</h4><blockquote>
+<p>自连接就是一个表，同本身进行连接。对于自连接可以想像存在两个相同的表(表和表的副本)，可以通过不同的别名区别两个相同的表（其它就是内连接）。</p>
+</blockquote>
+<p>显示雇员名称和雇员的经理名称。<br>执行以下查询：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT worker.ename || &apos; 的经理是 &apos; || manager.ename AS 雇员经理</div><div class="line">    FROM emp worker, emp manager</div><div class="line">    WHERE worker.mgr = manager.empno;</div></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="组函数"><a href="#组函数" class="headerlink" title="组函数"></a>组函数</h4><blockquote>
+<ul>
+<li>组函数只能应用于SELECT子句、HAVING子句或ORDER BY子句中。</li>
+<li>组函数也可以称为统计函数。</li>
+<li>组函数忽略列的空值。</li>
+<li>对组可以应用组函数。</li>
+<li>在组函数中可使用DISTINCT或ALL关键字。</li>
+<li>ALL表示对所有非NULL值(可重复)进行运算。</li>
+<li>DISTINCT 表示对每一个非NULL值，如果存在重复值，则组函数只运算一次。如果不指明上述关键字，默认为ALL。</li>
 </ul>
-<h6 id="mac80211-版本"><a href="#mac80211-版本" class="headerlink" title="mac80211 版本"></a>mac80211 版本</h6><ul>
-<li><strong>iw</strong></li>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">AVG()</td>
+<td>求平均值</td>
+</tr>
+<tr>
+<td style="text-align:left">COUNT()</td>
+<td>求计数值，返回非空行数，*表示返回所有行</td>
+</tr>
+<tr>
+<td style="text-align:left">MAX()</td>
+<td>求最大值</td>
+</tr>
+<tr>
+<td style="text-align:left">MIN()</td>
+<td>求最小值</td>
+</tr>
+<tr>
+<td style="text-align:left">SUM()</td>
+<td>求和</td>
+</tr>
+<tr>
+<td style="text-align:left">STDDEV()</td>
+<td>求标准偏差，是根据差的平方根得到的</td>
+</tr>
+<tr>
+<td style="text-align:left">VARIANCE()</td>
+<td>求统计方差</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h4><p>如：按职务统计工资总和。<br>执行以下查询：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT job,SUM(sal) FROM emp</div><div class="line">    GROUP BY job;</div></pre></td></tr></table></figure></p>
+<hr>
+<ul>
+<li>多列分组<br>按部门和职务分组统计工资总和。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT deptno, job, sum(sal)</div><div class="line">    FROM emp</div><div class="line">    GROUP BY deptno, job;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h5 id="无线网卡配置命令"><a href="#无线网卡配置命令" class="headerlink" title="无线网卡配置命令"></a>无线网卡配置命令</h5><h6 id="查看配置命令"><a href="#查看配置命令" class="headerlink" title="查看配置命令"></a>查看配置命令</h6><ul>
-<li><strong>iwconfig</strong></li>
-<li><strong>ifconfig</strong></li>
-<li><strong>iw list</strong></li>
+<hr>
+<ul>
+<li><p>HAVING</p>
+<blockquote>
+<p>HAVING从句过滤分组后的结果，它只能出现在GROUP BY从句之后，而WHERE从句要出现在GROUP BY从句之前。  </p>
+</blockquote>
+<p>统计各部门的最高工资，排除最高工资小于3000的部门。<br>执行以下查询：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT deptno, max(sal) FROM emp</div><div class="line">    GROUP BY deptno</div><div class="line">    HAVING max(sal)&gt;=3000;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h6 id="查看信道频率命令"><a href="#查看信道频率命令" class="headerlink" title="查看信道频率命令"></a>查看信道频率命令</h6><ul>
-<li><strong>iwlist wlan1 frequency</strong></li>
-<li><strong>iw list</strong></li>
-</ul>
-<h5 id="扫描-AP-命令"><a href="#扫描-AP-命令" class="headerlink" title="扫描 AP 命令"></a>扫描 AP 命令</h5><ul>
-<li>iw dev wlan0 scan | grep SSID</li>
-<li>iw dev wlan0 scan | egrep “DS\ Parameter\ set|SSID”</li>
-<li>iwlist wlan0 scanning | egrep “ESSID|Channel”</li>
-</ul>
-<h5 id="Monitor-模式"><a href="#Monitor-模式" class="headerlink" title="Monitor 模式"></a>Monitor 模式</h5><ul>
-<li>iw dev wlan0 interface add wlan0mon type monitor</li>
-<li>iw dev wlan0mon interface del</li>
+<hr>
+<ul>
+<li><p>分组统计结果排序</p>
+<blockquote>
+<p>可以使用ORDER BY从句对统计的结果进行排序，ORDER BY从句要出现在语句的最后。  </p>
+</blockquote>
+<p>如：按职务统计工资总和并排序。<br>执行以下查询：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT job 职务, SUM(sal) 工资总和</div><div class="line">    FROM emp</div><div class="line">    GROUP BY job</div><div class="line">    ORDER BY SUM(sal);</div></pre></td></tr></table></figure>
+</li>
+<li><p>组函数的嵌套使用<br>如：求各部门平均工资的最高值。<br>执行以下查询：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">SELECT max(avg(sal)) FROM emp</div><div class="line">    GROUP BY deptno;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 </span>
       
@@ -453,7 +516,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/无线网络/" rel="tag">#无线网络</a>
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/Oracle/" rel="tag">#Oracle</a>
           
         </div>
       
@@ -462,13 +527,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/28/第五章-802-11-头部/" rel="prev">第五章 802.11 头部</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/28/第三章-无线技术的常用概念/" rel="next">第三章  无线技术的常用概念</a>
+              <a href="/2017/10/22/Oracle-联合查询/" rel="next">第六章、Oracle-联合查询</a>
             
           </div>
         </div>
@@ -736,7 +799,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#802-11-协议栈版本"><span class="nav-number">1.</span> <span class="nav-text">802.11 协议栈版本</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Ieee80211版本"><span class="nav-number">1.1.</span> <span class="nav-text">Ieee80211版本</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#mac80211-版本"><span class="nav-number">1.2.</span> <span class="nav-text">mac80211 版本</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#无线网卡配置命令"><span class="nav-number">2.</span> <span class="nav-text">无线网卡配置命令</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#查看配置命令"><span class="nav-number">2.1.</span> <span class="nav-text">查看配置命令</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#查看信道频率命令"><span class="nav-number">2.2.</span> <span class="nav-text">查看信道频率命令</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#扫描-AP-命令"><span class="nav-number">3.</span> <span class="nav-text">扫描 AP 命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Monitor-模式"><span class="nav-number">4.</span> <span class="nav-text">Monitor 模式</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#不等连接"><span class="nav-number">1.</span> <span class="nav-text">不等连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自连接"><span class="nav-number">2.</span> <span class="nav-text">自连接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组函数"><span class="nav-number">3.</span> <span class="nav-text">组函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分组查询"><span class="nav-number">4.</span> <span class="nav-text">分组查询</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -799,9 +862,9 @@
 
   <script type="text/javascript">
     var disqus_shortname = 'xxx';
-    var disqus_identifier = '2017/07/28/第四章-无线网络协议栈/';
-    var disqus_title = '第四章 无线网络协议栈';
-    var disqus_url = 'http://yoursite.com/2017/07/28/第四章-无线网络协议栈/';
+    var disqus_identifier = '2017/10/24/Oracle-联合查询与分组查询/';
+    var disqus_title = '第七章、Oracle-联合查询与分组查询';
+    var disqus_url = 'http://yoursite.com/2017/10/24/Oracle-联合查询与分组查询/';
 
     function run_disqus_script(disqus_script){
       var dsq = document.createElement('script');
