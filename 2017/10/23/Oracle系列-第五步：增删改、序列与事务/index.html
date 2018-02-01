@@ -31,7 +31,7 @@
 
 
 
-  <meta name="keywords" content="Vim,使用指南," />
+  <meta name="keywords" content="笔记,Oracle," />
 
 
 
@@ -40,20 +40,20 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Introduction: Some shortcut key of VIM.">
-<meta name="keywords" content="Vim,使用指南">
+<meta name="description" content="Some notes of Learning Oralce.">
+<meta name="keywords" content="笔记,Oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VIM 部分快捷键使用手册">
-<meta property="og:url" content="http://yoursite.com/2017/09/18/VIM-部分快捷键使用手册/index.html">
+<meta property="og:title" content="Oracle系列-第五步：增删改、序列与事务">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/Oracle系列-第五步：增删改、序列与事务/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
-<meta property="og:description" content="Introduction: Some shortcut key of VIM.">
+<meta property="og:description" content="Some notes of Learning Oralce.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/vimpic.jpg">
-<meta property="og:updated_time" content="2018-02-01T09:24:02.238Z">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/monitor-laptop-computer.jpg">
+<meta property="og:updated_time" content="2018-02-01T09:52:03.140Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VIM 部分快捷键使用手册">
-<meta name="twitter:description" content="Introduction: Some shortcut key of VIM.">
-<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/vimpic.jpg">
+<meta name="twitter:title" content="Oracle系列-第五步：增删改、序列与事务">
+<meta name="twitter:description" content="Some notes of Learning Oralce.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/monitor-laptop-computer.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,7 +63,7 @@
   };
 </script>
 
-  <title> VIM 部分快捷键使用手册 | Frazier's World </title>
+  <title> Oracle系列-第五步：增删改、序列与事务 | Frazier's World </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -353,7 +353,7 @@
           
           
             
-              VIM 部分快捷键使用手册
+              Oracle系列-第五步：增删改、序列与事务
             
           
         </h1>
@@ -362,8 +362,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2017-09-18T16:06:55+08:00" content="2017-09-18">
-            2017-09-18
+          <time itemprop="dateCreated" datetime="2017-10-23T12:07:19+08:00" content="2017-10-23">
+            2017-10-23
           </time>
         </span>
 
@@ -372,8 +372,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/categories/Vim/" itemprop="url" rel="index">
-                  <span itemprop="name">Vim</span>
+                <a href="/categories/Oracle/" itemprop="url" rel="index">
+                  <span itemprop="name">Oracle</span>
                 </a>
               </span>
 
@@ -388,8 +388,8 @@
           
             <span class="post-comments-count">
             &nbsp; | &nbsp;
-            <a href="/2017/09/18/VIM-部分快捷键使用手册/#comments" itemprop="discussionUrl">
-              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/18/VIM-部分快捷键使用手册/" itemprop="commentsCount"></span>
+            <a href="/2017/10/23/Oracle系列-第五步：增删改、序列与事务/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/23/Oracle系列-第五步：增删改、序列与事务/" itemprop="commentsCount"></span>
             </a>
           </span>
           
@@ -403,88 +403,65 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/vimpic.jpg" alt="Vim"><br><strong>Introduction: Some shortcut key of VIM.</strong><br><a id="more"></a></p>
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/monitor-laptop-computer.jpg" alt="Oracle notes"><br><strong>Some notes of Learning Oralce.</strong><br><a id="more"></a></p>
 <hr>
-<h4 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h4><ul>
-<li><p>【h、j、k、l】，分别控制光标左、下、上、右移一格</p>
+<h3 id="增删改"><a href="#增删改" class="headerlink" title="增删改"></a>增删改</h3><ul>
+<li><p>增</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> [表名] [(列名)] <span class="keyword">values</span> [值];</div></pre></td></tr></table></figure>
 </li>
-<li><p>【ctrl+b】屏幕往”后”移动一页</p>
+<li><p>删:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">delete</span> <span class="keyword">from</span> [表名] <span class="keyword">where</span> [条件]  <span class="comment">--删除表</span></div><div class="line"><span class="keyword">truncate</span> <span class="keyword">table</span> [表名] <span class="comment">--清空表</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>【ctrl+f】屏幕往”前”移动一页</p>
-</li>
-<li><p>【n<space>】光标向右移动n个字符</space></p>
-</li>
-<li><p>【Home】移动到这一行的最前面字符处:0数字，但不能用数字小键盘上的数字</p>
-</li>
-<li><p>【End】 移动到这一行的最后面字符处:$，我测试好像不行</p>
-</li>
-<li><p>【w】光标跳到下个字的开头</p>
-</li>
-<li><p>【e】光标跳到下个字的字尾</p>
-</li>
-<li><p>【H】 光标移动到这个屏幕的最上方那一行的第一个字符</p>
-</li>
-<li><p>【M】 光标移动到这个屏幕的中间那一行的第一个字符</p>
-</li>
-<li><p>【L】光标移动到这个屏幕的最下方那一行的第一个字符</p>
-</li>
-<li><p>【G】 移动到这个文件的最后一行</p>
-</li>
-<li><p>【nG】移动到这个文件的第n行(可配合:set nu)</p>
-</li>
-<li><p>【gg】 移动到这个文件的第一行，相当于1G</p>
-</li>
-<li><p>【n<enter>】光标向下移动n行</enter></p>
+<li><p>改:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">update</span> 表名 <span class="keyword">set</span> [列名<span class="number">1</span>=值<span class="number">1</span>], [列名<span class="number">2</span>=值<span class="number">2</span>],... <span class="keyword">where</span> [条件]</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="查找与替换"><a href="#查找与替换" class="headerlink" title="查找与替换"></a>查找与替换</h4><ul>
-<li><p>【/word】 向光标向下寻找一个名称为word的字符串</p>
+<hr>
+<h3 id="复制数据"><a href="#复制数据" class="headerlink" title="复制数据"></a>复制数据</h3><ul>
+<li><p>通过一条查询语句创建一个新表(要求目标表不存在)  </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> manager <span class="keyword">AS</span> <span class="keyword">SELECT</span> empno,ename,sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> job=<span class="string">'MANAGER'</span>;</div></pre></td></tr></table></figure>
 </li>
-<li><p>【?word】 向光标向上寻找一个名称为word的字符串</p>
-</li>
-<li><p>【n】 代表重复前一个查找的动作</p>
-</li>
-<li><p>【N】 与n刚好相反，为【反向】进行行前一个查找动作</p>
-</li>
-<li><p>【:n1,n2s/word1/word2/g】n1与n2为数字，在第n1与n2行之间查找word1 这个字符串，并将该字符串替换为word2</p>
-</li>
-<li><p>【:1,$s/word1/word2/g】 从第一行到最后一行查找word1字符串，并将该字符串替换为word2</p>
-</li>
-<li><p>【:1,$s/word1/word2/gc】从第一行到最后一行查找word1字符串，并将该字符串替换为word2，且在替换前提示用户确认是否进行替换</p>
+<li><p>通过一条查询语句复制数据(要求目标表必须已建好)</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> manager <span class="keyword">SELECT</span> empno, ename, sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span>	job = <span class="string">'CLERK'</span>;</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="删除、复制与粘贴"><a href="#删除、复制与粘贴" class="headerlink" title="删除、复制与粘贴"></a>删除、复制与粘贴</h4><ul>
-<li><p>【x】 为向后删除一个字符 (相当于【del】键)</p>
-</li>
-<li><p>【X】 为向前删除一个字符(相当于【backspace】键)</p>
-</li>
-<li><p>【nx】 连续向后删除n个字符</p>
-</li>
-<li><p>【dd】 删除光标所在行</p>
-</li>
-<li><p>【ndd】 删除光标所在的向下n行</p>
-</li>
-<li><p>【d1G】 删除光标所在行到第一行的所有数据</p>
-</li>
-<li><p>【dG】 删除光标所在到最后一行的所有数据</p>
-</li>
-<li><p>【d$】 删除光标所在处，到该行的最后一个字符</p>
-</li>
-<li><p>【d0】 删除光标所在处，到该行的最前一个字符</p>
-</li>
-<li><p>【yy】 复制光标所在的那一行</p>
-</li>
-<li><p>【nyy】 复制光标所在的向下n列</p>
-</li>
-<li><p>【y1G】 复制光标所在行到第一行的所有数据</p>
-</li>
-<li><p>【yG】 复制光标所在行到最后一行的所有数据</p>
-</li>
-<li><p>【y0】 复制光标所在的那个字符到该行行首的所有数据</p>
-</li>
-<li><p>【y$】 复制光标所在的那个字符到该行行尾的</p>
+<hr>
+<h3 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h3><h4 id="创建序列"><a href="#创建序列" class="headerlink" title="创建序列"></a>创建序列</h4><p>如：<br>创建从2000起始，增量为1 的序列abc：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">SEQUENCE</span> abc <span class="keyword">INCREMENT</span> <span class="keyword">BY</span> <span class="number">1</span> <span class="keyword">START</span> <span class="keyword">WITH</span> <span class="number">2000</span></div><div class="line">    MAXVALUE <span class="number">99999</span> <span class="keyword">CYCLE</span> NOCACHE;</div></pre></td></tr></table></figure></p>
+<h4 id="使用序列"><a href="#使用序列" class="headerlink" title="使用序列"></a>使用序列</h4><ul>
+<li>序列名.nextval: 代表下一个值  </li>
+<li>序列名.currval: 代表当前值<br>如：<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> manager <span class="keyword">VALUES</span>(abc.nextval,<span class="string">'小王'</span>,<span class="number">2500</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> manager <span class="keyword">VALUES</span>(abc.nextval,<span class="string">'小赵'</span>,<span class="number">2800</span>);</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<hr>
+<h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><blockquote>
+<p>两次连续成功的 <strong>COMMIT</strong> 或 <strong>ROLLBACK</strong> 之间的操作，称为一个事务。在一个事务内，数据的修改一起提交或撤销，如果发生故障或系统错误，整个事务也会自动撤销</p>
+</blockquote>
+<p>PS: <em>数据库事务处理可分为隐式和显式两种。显式事务操作通过命令实现，隐式事务由系统自动完成提交或撤销(回退)工作，无需用户的干预。</em></p>
+<ul>
+<li>隐式提交的情况包括：</li>
+</ul>
+<p>当用户正常退 <strong><em>SQLPlus</em></strong> 或执行 <strong><em>CREATE、DROP、GRANT、REVOKE</em></strong> 等命令时会发生事务的自动提交。</p>
+<ul>
+<li>显示事务:  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">COMMIT</th>
+<th>数据库事务提交，将变化写入数据库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>ROLLBACK</strong></td>
+<td><strong>数据库事务回退，撤销对数据的修改</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>SAVEPOIN</strong>T</td>
+<td><strong>创建保存点，用于事务的阶段回退</strong></td>
+</tr>
+</tbody>
+</table>
 </span>
       
     </div>
@@ -493,9 +470,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vim/" rel="tag">#Vim</a>
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
-            <a href="/tags/使用指南/" rel="tag">#使用指南</a>
+            <a href="/tags/Oracle/" rel="tag">#Oracle</a>
           
         </div>
       
@@ -504,13 +481,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/18/Oracle系列-第二步：建表空间、用户及授权/" rel="prev">Oracle系列-第二步：建表空间、用户及授权</a>
+              <a href="/2017/10/24/Oracle系列-第六步：表操作与约束/" rel="prev">Oracle系列-第六步：表操作与约束</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/17/Oracle系列-第一步：初始化/" rel="next">Oracle系列-第一步：初始化</a>
+              <a href="/2017/10/22/Oracle系列-第四步：函数/" rel="next">Oracle系列-第四步：函数</a>
             
           </div>
         </div>
@@ -778,7 +755,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#移动"><span class="nav-number">1.</span> <span class="nav-text">移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找与替换"><span class="nav-number">2.</span> <span class="nav-text">查找与替换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除、复制与粘贴"><span class="nav-number">3.</span> <span class="nav-text">删除、复制与粘贴</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#增删改"><span class="nav-number">1.</span> <span class="nav-text">增删改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复制数据"><span class="nav-number">2.</span> <span class="nav-text">复制数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#序列"><span class="nav-number">3.</span> <span class="nav-text">序列</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建序列"><span class="nav-number">3.1.</span> <span class="nav-text">创建序列</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用序列"><span class="nav-number">3.2.</span> <span class="nav-text">使用序列</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#事务"><span class="nav-number">4.</span> <span class="nav-text">事务</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -841,9 +818,9 @@
 
   <script type="text/javascript">
     var disqus_shortname = 'xxx';
-    var disqus_identifier = '2017/09/18/VIM-部分快捷键使用手册/';
-    var disqus_title = 'VIM 部分快捷键使用手册';
-    var disqus_url = 'http://yoursite.com/2017/09/18/VIM-部分快捷键使用手册/';
+    var disqus_identifier = '2017/10/23/Oracle系列-第五步：增删改、序列与事务/';
+    var disqus_title = 'Oracle系列-第五步：增删改、序列与事务';
+    var disqus_url = 'http://yoursite.com/2017/10/23/Oracle系列-第五步：增删改、序列与事务/';
 
     function run_disqus_script(disqus_script){
       var dsq = document.createElement('script');
