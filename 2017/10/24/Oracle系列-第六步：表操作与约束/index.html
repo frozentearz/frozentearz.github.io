@@ -1,0 +1,1116 @@
+
+<!doctype html>
+<html class="theme-next use-motion theme-next-mala">
+<head>
+  
+
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+  <meta name="google-site-verification" content="xxx" />
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
+
+
+    <meta name="description" content="大家好，我是一名路过的黑客，专门盗账号的。现在这个人的帐号被我盗了，但看这个人一直积极分享，无私奉献、过着艰苦努力、持之以恒的技术研究生活，我被深深的感动了，希望大家看到我这条消息后，可以私聊他，多鼓励他，不缺钱的就多给他一些经济上的资助，让他再接再厉！就这样吧，我下线了，眼框湿湿的难受。" />
+
+
+
+  <meta name="keywords" content="笔记,Oracle," />
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+
+
+<meta name="description" content="Some notes of Learning Oralce.">
+<meta name="keywords" content="笔记,Oracle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle系列-第六步：表操作与约束">
+<meta property="og:url" content="http://yoursite.com/2017/10/24/Oracle系列-第六步：表操作与约束/index.html">
+<meta property="og:site_name" content="Frazier&#39;s World">
+<meta property="og:description" content="Some notes of Learning Oralce.">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/table-pen-technology.jpg">
+<meta property="og:updated_time" content="2017-12-24T11:30:35.321Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oracle系列-第六步：表操作与约束">
+<meta name="twitter:description" content="Some notes of Learning Oralce.">
+<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/table-pen-technology.jpg">
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var CONFIG = {
+    scheme: 'Mala',
+    sidebar: 'post'
+  };
+</script>
+
+  <title> Oracle系列-第六步：表操作与约束 | Frazier's World </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  <!--[if lte IE 8]>
+  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
+    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
+           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
+           style='margin-left:auto;margin-right:auto;display: block;'/>
+    </a>
+  </div>
+<![endif]-->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'xxx', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?xxx";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+  <div class="container one-column page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><h1 class="site-meta">
+  <span class="logo-line-before"><i></i></span>
+  <a href="/" class="brand" rel="start">
+      <span class="logo">
+        <i class="icon-next-logo"></i>
+      </span>
+      <span class="site-title">Frazier's World</span>
+  </a>
+  <span class="logo-line-after"><i></i></span>
+</h1>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu menu-left">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon icon-next-home"></i> <br />
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            <i class="menu-item-icon icon-next-archives"></i> <br />
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            <i class="menu-item-icon icon-next-tags"></i> <br />
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
+          </a>
+        </li>
+      
+
+      
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <form class="site-search-form">
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+  </form>
+
+
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+    (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+    e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+  _st('install', 'xxx','2.0.0');
+</script>
+
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    
+      
+
+      
+        <style type="text/css">
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        background: #555 no-repeat;
+        cursor: move;
+    }
+
+    .assist-btn {
+        position: fixed;
+        top: 50％;
+        left: 10px;
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+        outline: none;
+        border: none;
+        color: #87daff;
+    }
+
+</style>
+
+<script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript">
+    // 浮动圆点展开与收缩
+    /*
+    $(function () {
+        var assist_box = $('.assist-box');
+        $('#assist_btn').hover(function () {
+            assist_box.stop().show(300);
+        }, function () {
+            assist_box.stop().hide(150);
+        })
+    });
+    */  
+    //浮动圆点拖动
+    $(function () {
+        var box = document.getElementById('assist_btn');
+        box.onmousedown = function (event) {
+            var e = event || window.event,
+                t = e.target || e.srcElement,
+                // 鼠标按下时的坐标x1,y1
+                x1 = e.clientX,
+                y1 = e.clientY,
+                //鼠标按下时的左右偏移量
+                dragLeft = this.offsetLeft,
+                dragTop = this.offsetTop;
+
+            document.onmousemove = function (event) {
+                var e = event || window.event,
+                    t = e.target || e.srcElement,
+                    // 鼠标移动时的动态坐标
+                    x2 = e.clientX,
+                    y2 = e.clientY,
+                    // 鼠标移动时的坐标的变化量
+                    x = x2 - x1,
+                    y = y2 - y1;
+                box.style.left = (dragLeft + x) + 'px';
+                box.style.top = (dragTop + y) + 'px';
+            }
+
+            document.onmouseup = function () {
+                this.onmousemove = null;
+            }
+        }
+    });
+
+/*
+    $whitesmoke   = #f5f5f5
+    $gainsboro    = #eee
+    $gray-lighter = #ddd
+    $grey-light   = #ccc
+    $grey         = #bbb
+    $grey-dark    = #999
+    $grey-dim     = #666
+    $black-light  = #555
+    $black-deep   = #222
+    $red          = #ff2a2a
+    $blue-bright  = #87daff
+    $blue         = #0684bd
+    $blue-deep    = #262a30
+*/
+    // white theme
+    var body = {color: "#555", background: "white"};
+    var a_tag = {color: "#222"};
+    var header = { background: "#f5f5f5"};
+    var logo_line_i = {background: "#222"};
+    // var post_code = {background: "#eee", color: "#222"};
+
+    function switch_theme() {
+        $("body").css(body);
+        $("a:not('.links-of-author-item a, .site-state-item a, .site-state-posts a, .feed-link a, .motion-element a, .post-tags a, .show-commit-cls a, #donate_board a')").css(a_tag);
+        $(".header, .footer").css(header);
+        $(".logo-line-before i, .logo-line-after i").css(logo_line_i);
+        //$(".post code").css(post_code);
+        $("#idhyt-surprise-ball #idhyt-surprise-ball-animation .drag").css(a_tag);
+        $(".post-title-link, .posts-expand .post-meta, .post-comments-count, .disqus-comment-count, .post-category a, .post-nav-next a, .post-nav-item a").css(a_tag);
+        
+        // $("code").css({color: '#c5c8c6', background: '#1d1f21'});
+        $("#assist_btn").hide(1500);
+    }
+
+    $(function () {
+        $("#assist_btn").dblclick(function() {
+            switch_theme();
+        });
+    });
+
+</script>
+
+<div>
+
+    <button class="assist-btn circle" id="assist_btn" title="双击切换">
+        亮
+    </button>
+
+</div>
+
+
+
+
+
+
+
+
+
+      
+
+    
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div id="content" class="content"> 
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
+              Oracle系列-第六步：表操作与约束
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2017-10-24T17:00:53+08:00" content="2017-10-24">
+            2017-10-24
+          </time>
+        </span>
+
+        
+          <span class="post-category" >
+            &nbsp; | &nbsp; 分类于
+            
+              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                <a href="/categories/Oracle/" itemprop="url" rel="index">
+                  <span itemprop="name">Oracle</span>
+                </a>
+              </span>
+
+              
+              
+
+            
+          </span>
+        
+
+        
+          
+            <span class="post-comments-count">
+            &nbsp; | &nbsp;
+            <a href="/2017/10/24/Oracle系列-第六步：表操作与约束/#comments" itemprop="discussionUrl">
+              <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/10/24/Oracle系列-第六步：表操作与约束/" itemprop="commentsCount"></span>
+            </a>
+          </span>
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/table-pen-technology.jpg" alt="Oracle notes"><br><strong>Some notes of Learning Oralce.</strong><br><a id="more"></a></p>
+<hr>
+<h3 id="表操作"><a href="#表操作" class="headerlink" title="表操作"></a>表操作</h3><h4 id="常规建表"><a href="#常规建表" class="headerlink" title="常规建表"></a>常规建表</h4><p>格式：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> 表名 (</div><div class="line">    [列名<span class="number">1</span>] [类型] [约束],</div><div class="line">    [列名<span class="number">2</span>] [类型] [约束],</div><div class="line">    [...]</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>如：创建出版社表。<br>输入并执行以下命令：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 出版社(</div><div class="line">    编号 VARCHAR2(<span class="number">2</span>),</div><div class="line">    出版社名称 VARCHAR2(<span class="number">30</span>),</div><div class="line">    地址 VARCHAR2(<span class="number">30</span>),</div><div class="line">    联系电话 VARCHAR2(<span class="number">20</span>)</div><div class="line">);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书(</div><div class="line">    图书编号 VARCHAR2(<span class="number">5</span>),</div><div class="line">    图书名称 VARCHAR2(<span class="number">30</span>),</div><div class="line">    出版社编号 VARCHAR2(<span class="number">2</span>),</div><div class="line">    作者 VARCHAR2(<span class="number">10</span>),</div><div class="line">    出版日期 <span class="built_in">DATE</span>,</div><div class="line">    数量 <span class="built_in">NUMBER</span>(<span class="number">3</span>),</div><div class="line">    单价 <span class="built_in">NUMBER</span>(<span class="number">7</span>,<span class="number">2</span>)</div><div class="line">);</div></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="通过子查询建表"><a href="#通过子查询建表" class="headerlink" title="通过子查询建表"></a>通过子查询建表</h4><ol>
+<li><p>完全复制图书表到“图书1”<br>输入并执行以下命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书<span class="number">1</span> <span class="keyword">AS</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 图书;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建新的图书表“图书2”，只包含书名和单价<br>输入并执行以下命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书<span class="number">2</span>(书名, 单价) <span class="keyword">AS</span> <span class="keyword">SELECT</span> 图书名称, 单价 <span class="keyword">FROM</span> 图书;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建新的图书表“图书3”，只包含书名和单价，不复制内容<br>输入并执行以下命令：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 图书<span class="number">3</span>(书名, 单价) <span class="keyword">AS</span> <span class="keyword">SELECT</span> 图书名称, 单价 <span class="keyword">FROM</span> 图书 <span class="keyword">WHERE</span> <span class="number">1</span> = <span class="number">2</span>;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<h4 id="表的其他操作"><a href="#表的其他操作" class="headerlink" title="表的其他操作"></a>表的其他操作</h4><ul>
+<li><p>删除表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">drop</span> <span class="keyword">table</span> 表名;</div></pre></td></tr></table></figure>
+</li>
+<li><p>重命名表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">RENAME</span> 表名 <span class="keyword">TO</span> 新表名;</div><div class="line">```  </div><div class="line"></div><div class="line">- 查看表  </div><div class="line">可以通过对数据字典 `USER_OBJECTS` 的查询，显示当前模式用户的所有表。  </div><div class="line">如： 显示当前用户的所有表。</div><div class="line">```SQL</div><div class="line"><span class="keyword">SELECT</span> object_name <span class="keyword">FROM</span> user_objects <span class="keyword">WHERE</span> object_type=<span class="string">'TABLE'</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改表  </p>
+<ul>
+<li><p>增加新列<br>如： 为“出版社”增加一列“电子邮件”：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 出版社 <span class="keyword">ADD</span> 电子邮件 VARCHAR2(<span class="number">30</span>) <span class="keyword">CHECK</span>(电子邮件 <span class="keyword">LIKE</span> <span class="string">'%@%'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改列<br>修改列定义有以下一些特点：  </p>
+<ul>
+<li>列的宽度可以增加或减小，在表的列没有数据或数据为 NUL L时才能减小宽度。  </li>
+<li>在表的列没有数据或数据为 NULL 时才能改变数据类型，CHAR 和 VARCHAR2 之间可以随意转换。  </li>
+<li>只有当列的值非空时，才能增加约束条件 NOT NULL 。  </li>
+<li>修改列的默认值，只影响以后插入的数据。如：修改 “出版社” 表 “电子邮件” 列的宽度为 40。  <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 出版社 <span class="keyword">MODIFY</span> 电子邮件 VARCHAR2(<span class="number">40</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>删除列<br>如：删除“出版社”表的“电子邮件”列。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 出版社 <span class="keyword">DROP</span> <span class="keyword">COLUMN</span> 电子邮件;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="分区表"><a href="#分区表" class="headerlink" title="分区表"></a>分区表</h4><blockquote>
+<p>在某些场合会使用非常大的表，比如人口信息统计表。如果一个表很大，就会降低查询的速度，并增加管理的难度。一旦发生磁盘损坏，可能整个表的数据就会丢失，恢复比较困难。根据这一情况，可以创建分区表，把一个大表分成几个区(小段)，对数据的操作和管理都可以针对分区进行，这样就可以提高数据库的运行效率。分区可以存在于不同的表空间上，提高了数据的可用性。</p>
+</blockquote>
+<p>例：创建和使用分区表。<br>    创建按成绩分区的考生表，共分为3个区：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> 考生 (</div><div class="line">	  考号 VARCHAR2(<span class="number">5</span>),</div><div class="line">	  姓名 VARCHAR2(<span class="number">30</span>),</div><div class="line">	  成绩 <span class="built_in">NUMBER</span>(<span class="number">3</span>)</div><div class="line">)</div><div class="line"><span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">RANGE</span>(成绩) (</div><div class="line">    <span class="keyword">PARTITION</span> A <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="number">300</span>)</div><div class="line">    <span class="keyword">TABLESPACE</span> <span class="keyword">USERS</span>,</div><div class="line">    <span class="keyword">PARTITION</span> B <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (<span class="number">500</span>)</div><div class="line">    <span class="keyword">TABLESPACE</span> <span class="keyword">USERS</span>,</div><div class="line">    <span class="keyword">PARTITION</span> C <span class="keyword">VALUES</span> <span class="keyword">LESS</span> <span class="keyword">THAN</span> (MAXVALUE)</div><div class="line">    <span class="keyword">TABLESPACE</span> <span class="keyword">USERS</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>例：检查A区中的考生：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 考生 <span class="keyword">PARTITION</span>(A);</div></pre></td></tr></table></figure></p>
+<p>例：检查全部的考生：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> 考生;</div></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="约束"><a href="#约束" class="headerlink" title="约束"></a>约束</h3><h4 id="添加表的约束"><a href="#添加表的约束" class="headerlink" title="添加表的约束"></a>添加表的约束</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">中文</th>
+<th>代码</th>
+<th>缩写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">主键</td>
+<td>primary key</td>
+<td>PK</td>
+</tr>
+<tr>
+<td style="text-align:left">唯一</td>
+<td>unique</td>
+<td>UQ</td>
+</tr>
+<tr>
+<td style="text-align:left">默认值</td>
+<td>default</td>
+<td>DF</td>
+</tr>
+<tr>
+<td style="text-align:left">检查约束</td>
+<td>check</td>
+<td>CK</td>
+</tr>
+<tr>
+<td style="text-align:left">外键约束</td>
+<td>foreign key</td>
+<td>FK</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h6 id="方法一：建表的同时添加约束"><a href="#方法一：建表的同时添加约束" class="headerlink" title="方法一：建表的同时添加约束"></a>方法一：建表的同时添加约束</h6><p>如：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> stuinfo</div><div class="line">(</div><div class="line">    sno <span class="built_in">int</span> primary <span class="keyword">key</span> <span class="keyword">not</span> <span class="literal">null</span>,             <span class="comment">--主键</span></div><div class="line">    sname varchar2(<span class="number">10</span>) <span class="keyword">unique</span> <span class="keyword">not</span> <span class="literal">null</span>,       <span class="comment">--唯一</span></div><div class="line">    sex <span class="built_in">char</span>(<span class="number">2</span>) <span class="keyword">default</span> <span class="string">'男'</span> <span class="keyword">check</span>(sex=<span class="string">'男'</span> <span class="keyword">or</span> sex = <span class="string">'女'</span>) <span class="keyword">not</span> <span class="literal">null</span>,   <span class="comment">--默认及检查</span></div><div class="line">    saddress varchar2(<span class="number">50</span>) <span class="keyword">not</span> <span class="literal">null</span>,</div><div class="line">    phone <span class="built_in">char</span>(<span class="number">11</span>),</div><div class="line">    email varchar2(<span class="number">50</span>)</div><div class="line">);</div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> stumarks</div><div class="line">(</div><div class="line">    marksId <span class="built_in">int</span>,</div><div class="line">    sno <span class="built_in">int</span> <span class="keyword">references</span> stuinfo(sno) <span class="keyword">not</span> <span class="literal">null</span>,     <span class="comment">--外键</span></div><div class="line">    score <span class="built_in">number</span>(<span class="number">5</span>,<span class="number">1</span>),</div><div class="line">    examDate <span class="built_in">date</span> <span class="keyword">default</span> <span class="keyword">sysdate</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
+<hr>
+<h6 id="方法二-建表完成后，再添加约束"><a href="#方法二-建表完成后，再添加约束" class="headerlink" title="方法二:建表完成后，再添加约束"></a>方法二:建表完成后，再添加约束</h6><p>如:（之前已建好了出版社表及图书表）  </p>
+<ul>
+<li><p>主键约束</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">add</span> <span class="keyword">constraint</span> PK_编号</div><div class="line">    primary <span class="keyword">key</span> (编号);</div></pre></td></tr></table></figure>
+</li>
+<li><p>唯一约束</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">add</span> <span class="keyword">constraint</span> UQ_地址</div><div class="line">    <span class="keyword">unique</span> (地址);</div></pre></td></tr></table></figure>
+</li>
+<li><p>检查约束</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">add</span> <span class="keyword">constraint</span> CK_联系电话</div><div class="line">    <span class="keyword">check</span> (联系电话 <span class="keyword">like</span> <span class="string">'1%'</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>默认值</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 出版社 <span class="keyword">modify</span> 地址 <span class="keyword">default</span> <span class="string">'湘潭'</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>外键约束</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 图书 <span class="keyword">add</span> <span class="keyword">constraint</span> FK_图书编号</div><div class="line">    foreign <span class="keyword">key</span> (图书编号) <span class="keyword">references</span> 出版社(编号)</div></pre></td></tr></table></figure>
+</li>
+<li><p>外键约束</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> 图书 <span class="keyword">add</span> <span class="keyword">constraint</span> FK_图书编号</div><div class="line">    foreign <span class="keyword">key</span> (图书编号) <span class="keyword">references</span> 出版社(编号)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h4 id="查看约束条件"><a href="#查看约束条件" class="headerlink" title="查看约束条件"></a>查看约束条件</h4><p>数据字典 <code>USER_CONSTRAINTS</code> 中包含了当前模式用户的约束条件信息。<br>其中，<code>CONSTRAINTS_TYPE</code> 显示的约束类型为：</p>
+<ul>
+<li><p>C：CHECK约束。  </p>
+</li>
+<li><p>P：PRIMARY KEY约束。  </p>
+</li>
+<li><p>U：UNIQUE约束。  </p>
+</li>
+<li><p>R：FOREIGN KEY约束。  </p>
+</li>
+</ul>
+<p>其他信息可根据需要进行查询显示，可用 <code>DESCRIBE</code> 命令查看 <code>USER_CONSTRAINTS</code> 的结构。<br>如: 检查表的约束信息：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SELECT</span> CONSTRAINT_NAME, CONSTRAINT_TYPE, SEARCH_CONDITION <span class="keyword">FROM</span> USER_CONSTRAINTS</div><div class="line">    <span class="keyword">WHERE</span> TABLE_NAME = <span class="string">'图书'</span>;</div></pre></td></tr></table></figure></p>
+<hr>
+<h4 id="删除约束条件"><a href="#删除约束条件" class="headerlink" title="删除约束条件"></a>删除约束条件</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 表名 <span class="keyword">DROP</span> <span class="keyword">CONSTRAINT</span> 约束名;</div></pre></td></tr></table></figure>
+<hr>
+</span>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+            <a href="/tags/Oracle/" rel="tag">#Oracle</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/31/Oracle系列-第十步：游标/" rel="prev">Oracle系列-第十步：游标</a>
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/22/Oracle系列-第五步：增删改、序列与事务/" rel="next">Oracle系列-第五步：增删改、序列与事务</a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div>
+      
+        <style type="text/css">
+
+    .donate_bar {
+        text-align: center;
+        margin-top : 5%;
+    }
+
+    .donate_bar.hidden {
+        display:none;
+    }
+/*
+    .donate_bar a.btn_donate {
+        display: inline-block;
+        width: 82px;
+        height: 82px;
+        margin-left:auto;
+        margin-right:auto;
+
+        background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+        _background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat; 
+
+        -webkit-transition: background 0s;
+        -moz-transition: background 0s;
+        -o-transition: background 0s;
+        -ms-transition: background 0s;
+        transition: background 0s;
+    }
+*/
+    .donate_bar a.btn_donate:hover { 
+        // background-position: 0px -82px;
+        color: #87daff
+    }
+
+    .donate_bar .donate_txt {
+        display: block;
+        color: #9d9d9d;
+        font: 14px/2 "Microsoft Yahei";
+    }
+
+    .bold { 
+        font-weight: bold; 
+    }
+
+    .post-donate a {
+        border-bottom: 0px;
+    }
+
+    #donate_guide table {
+        border: none;
+    }
+
+    #donate_guide td {
+        border-bottom: none;
+        border-right: none;
+        background: #333333;
+        valign: top;
+    }
+
+</style>
+
+
+
+    
+
+    <div class ="post-donate">
+        <div id="donate_board" class="donate_bar center">
+              <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
+              <span id="donate_txt" class="donate_txt">
+                   
+                        如果您的支付宝或者微信里碰巧有钱，又不小心碰巧点到我的打赏的话...
+                   
+              </span>
+            <br>
+        </div>  
+  
+        <div id="donate_guide" class="donate_bar center hidden">
+            <!--
+            
+                <a href="http://upload-images.jianshu.io/upload_images/3107638-c31d4afbe3294111.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="支付宝打赏" class="fancybox" rel="article0" 
+                    style="float:left;margin-left:25%;margin-right:10px;">
+                    <img src="http://upload-images.jianshu.io/upload_images/3107638-c31d4afbe3294111.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="" height="164px" width="164px">
+                </a> 
+              
+
+            
+                <a href="http://upload-images.jianshu.io/upload_images/3107638-5ba6406d36e20ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="微信打赏" class="fancybox" rel="article0"
+                    style="margin-right:30%">
+                    <img src="http://upload-images.jianshu.io/upload_images/3107638-5ba6406d36e20ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="" height="164px" width="164px">
+                </a>
+            
+            -->
+            <table>
+                <tr>
+                    <td>
+                        
+                            <a href="http://upload-images.jianshu.io/upload_images/3107638-c31d4afbe3294111.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="支付宝打赏" class="fancybox" rel="article0" 
+                                style="float:left;margin-left:25%;margin-right:10px;">
+                                <img src="http://upload-images.jianshu.io/upload_images/3107638-c31d4afbe3294111.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="" height="164px" width="164px">
+                            </a> 
+                         
+                    </td>
+                    <td>
+                        
+                            <a href="http://upload-images.jianshu.io/upload_images/3107638-5ba6406d36e20ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="微信打赏" class="fancybox" rel="article0"
+                                style="margin-right:30%">
+                                <img src="http://upload-images.jianshu.io/upload_images/3107638-5ba6406d36e20ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="" height="164px" width="164px">
+                            </a>
+                        
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('btn_donate').onclick = function() {
+                $('#donate_board').addClass('hidden');
+                // $('#donate_guide').removeClass('hidden');
+                $('#donate_guide').show(2000);
+            }
+
+        </script>
+    </div>
+
+    
+
+
+      
+    </div>
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+ </div>
+
+        
+          <div class="comments" id="comments">
+            
+              <div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+              </div>
+            <!--
+            
+            -->
+        
+      </div>
+
+      
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="http://otdo5q3gt.bkt.clouddn.com/github-headpic.jpg" alt="Frazier" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Frazier</p>
+        </div>
+        <p class="site-description motion-element" itemprop="description">大家好，我是一名路过的黑客，专门盗账号的。现在这个人的帐号被我盗了，但看这个人一直积极分享，无私奉献、过着艰苦努力、持之以恒的技术研究生活，我被深深的感动了，希望大家看到我这条消息后，可以私聊他，多鼓励他，不缺钱的就多给他一些经济上的资助，让他再接再厉！就这样吧，我下线了，眼框湿湿的难受。</p>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          <div class="site-state-item site-state-categories">
+            <a href="/categories">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">分类</span>
+              </a>
+          </div>
+
+          <div class="site-state-item site-state-tags">
+            <a href="/tags">
+              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-name">标签</span>
+              </a>
+          </div>
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="http://github.com/frozentearz" target="_blank">GitHub</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.jianshu.com/u/ca7c2dbd7f94" target="_blank">Jianshu</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/frozentearzg" target="_blank">Weibo</a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="zhihu.com/people/frazier-30" target="_blank">ZhiHu</a>
+              </span>
+            
+          
+        </div>
+
+        <div class="links-of-friendly motion-element">
+          
+            <p class="site-author-name">Links</p>
+            
+              <span class="links-of-author-item">
+              <a href="http://stormzhang.com/" target="_blank">stromzhang</a>
+              </span>
+            
+              <span class="links-of-author-item">
+              <a href="https://xuguoqing07.github.io/" target="_blank">xuguoqing07</a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#表操作"><span class="nav-number">1.</span> <span class="nav-text">表操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常规建表"><span class="nav-number">1.1.</span> <span class="nav-text">常规建表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过子查询建表"><span class="nav-number">1.2.</span> <span class="nav-text">通过子查询建表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#表的其他操作"><span class="nav-number">1.3.</span> <span class="nav-text">表的其他操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分区表"><span class="nav-number">1.4.</span> <span class="nav-text">分区表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约束"><span class="nav-number">2.</span> <span class="nav-text">约束</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加表的约束"><span class="nav-number">2.1.</span> <span class="nav-text">添加表的约束</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#方法一：建表的同时添加约束"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">方法一：建表的同时添加约束</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法二-建表完成后，再添加约束"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">方法二:建表完成后，再添加约束</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看约束条件"><span class="nav-number">2.2.</span> <span class="nav-text">查看约束条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除约束条件"><span class="nav-number">2.3.</span> <span class="nav-text">删除约束条件</span></a></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner"> <div class="copyright" >
+  
+  &copy; &nbsp;  2017 - 
+  <span itemprop="copyrightYear">2018
+  </span>
+  <span class="with-love">
+    <i class="icon-next-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Frazier
+  </span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme by <a class="theme-link" href="http://blog.idhyt.com">idhyt</a>.<a class="theme-link" href="https://github.com/idhyt/hexo-theme-next/tree/magiclamp">Mala</a>
+</div>
+
+<!-- busuanzi -->
+
+  <div class="busuanzi-info">
+    <div class="theme-info">
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <span id="busuanzi_container_site_pv">
+        本站总访问量<a class="theme-link"><span id="busuanzi_value_site_pv"></span></a>次
+    </span>
+</div>
+  </div>
+
+
+
+ </div>
+    </footer>
+
+    <div class="back-to-top"></div>
+  </div>
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  
+  
+    
+
+  <script type="text/javascript">
+    var disqus_shortname = 'xxx';
+    var disqus_identifier = '2017/10/24/Oracle系列-第六步：表操作与约束/';
+    var disqus_title = 'Oracle系列-第六步：表操作与约束';
+    var disqus_url = 'http://yoursite.com/2017/10/24/Oracle系列-第六步：表操作与约束/';
+
+    function run_disqus_script(disqus_script){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }
+
+    run_disqus_script('count.js');
+    
+      run_disqus_script('embed.js');
+    
+  </script>
+
+  
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.1"></script>
+
+
+  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.1"></script>
+  
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/js/motion_global.js?v=0.4.5.1" id="motion.global"></script>
+
+
+
+
+  <script type="text/javascript" src="/js/nav-toggle.js?v=0.4.5.1"></script>
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if (CONFIG.sidebar === 'always') {
+        displaySidebar();
+      }
+      if (isMobile()) {
+        FastClick.attach(document.body);
+      }
+    });
+  </script>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/lazyload.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#posts").find('img').lazyload({
+        placeholder: "/images/loading.gif",
+        effect: "fadeIn"
+      });
+    });
+  </script>
+</body>
+</html>
