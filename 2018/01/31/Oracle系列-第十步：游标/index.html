@@ -1,59 +1,59 @@
 
 <!doctype html>
 <html class="theme-next use-motion theme-next-mala">
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   
 
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-  <meta name="google-site-verification" content="xxx" />
-
-
-
-
-
-  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5"/>
-
-
-
-
-<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
-
-
-    <meta name="description" content="大家好，我是一名路过的黑客，专门盗账号的。现在这个人的帐号被我盗了，但看这个人一直积极分享，无私奉献、过着艰苦努力、持之以恒的技术研究生活，我被深深的感动了，希望大家看到我这条消息后，可以私聊他，多鼓励他，不缺钱的就多给他一些经济上的资助，让他再接再厉！就这样吧，我下线了，眼框湿湿的难受。" />
-
-
-
-  <meta name="keywords" content="笔记,Oracle," />
+  <meta name="google-site-verification" content="xxx">
 
 
 
 
 
-  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
+  <link rel="stylesheet" type="text/css" href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5">
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1">
+
+
+    <meta name="description" content="大家好，我是一名路过的黑客，专门盗账号的。现在这个人的帐号被我盗了，但看这个人一直积极分享，无私奉献、过着艰苦努力、持之以恒的技术研究生活，我被深深的感动了，希望大家看到我这条消息后，可以私聊他，多鼓励他，不缺钱的就多给他一些经济上的资助，让他再接再厉！就这样吧，我下线了，眼框湿湿的难受。">
+
+
+
+  <meta name="keywords" content="Oracle,笔记,">
+
+
+
+
+
+  <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1">
 
 
 <meta name="description" content="Some notes of Learning Oralce.">
-<meta name="keywords" content="笔记,Oracle">
+<meta name="keywords" content="Oracle,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Oracle系列-第十步：游标">
 <meta property="og:url" content="http://yoursite.com/2018/01/31/Oracle系列-第十步：游标/index.html">
 <meta property="og:site_name" content="Frazier&#39;s World">
 <meta property="og:description" content="Some notes of Learning Oralce.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://otdo5q3gt.bkt.clouddn.com/retina-macbook-macbook-computer.jpg">
-<meta property="og:updated_time" content="2018-02-01T09:11:36.017Z">
+<meta property="og:image" content="http://yoursite.com/images/img/retina-macbook-macbook-computer.jpg">
+<meta property="og:updated_time" content="2019-01-31T11:29:40.559Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle系列-第十步：游标">
 <meta name="twitter:description" content="Some notes of Learning Oralce.">
-<meta name="twitter:image" content="http://otdo5q3gt.bkt.clouddn.com/retina-macbook-macbook-computer.jpg">
+<meta name="twitter:image" content="http://yoursite.com/images/img/retina-macbook-macbook-computer.jpg">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +66,7 @@
   <title> Oracle系列-第十步：游标 | Frazier's World </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   <!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
@@ -103,7 +103,7 @@
   <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><h1 class="site-meta">
   <span class="logo-line-before"><i></i></span>
   <a href="/" class="brand" rel="start">
@@ -132,7 +132,7 @@
         
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
-            <i class="menu-item-icon icon-next-home"></i> <br />
+            <i class="menu-item-icon icon-next-home"></i> <br>
             首页
           </a>
         </li>
@@ -140,7 +140,7 @@
         
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
-            <i class="menu-item-icon icon-next-categories"></i> <br />
+            <i class="menu-item-icon icon-next-categories"></i> <br>
             分类
           </a>
         </li>
@@ -148,7 +148,7 @@
         
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
-            <i class="menu-item-icon icon-next-archives"></i> <br />
+            <i class="menu-item-icon icon-next-archives"></i> <br>
             归档
           </a>
         </li>
@@ -156,7 +156,7 @@
         
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
-            <i class="menu-item-icon icon-next-tags"></i> <br />
+            <i class="menu-item-icon icon-next-tags"></i> <br>
             标签
           </a>
         </li>
@@ -164,7 +164,7 @@
         
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
-            <i class="menu-item-icon icon-next-about"></i> <br />
+            <i class="menu-item-icon icon-next-about"></i> <br>
             关于
           </a>
         </li>
@@ -180,7 +180,7 @@
       
   
   <form class="site-search-form">
-    <input type="text" id="st-search-input" class="st-search-input st-default-search-input" />
+    <input type="text" id="st-search-input" class="st-search-input st-default-search-input">
   </form>
 
 
@@ -344,7 +344,7 @@
   <div id="posts" class="posts-expand">
     
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal " itemscope="" itemtype="http://schema.org/Article">
     <header class="post-header">
 
       
@@ -368,10 +368,10 @@
         </span>
 
         
-          <span class="post-category" >
+          <span class="post-category">
             &nbsp; | &nbsp; 分类于
             
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+              <span itemprop="about" itemscope="" itemtype="https://schema.org/Thing">
                 <a href="/categories/Oracle/" itemprop="url" rel="index">
                   <span itemprop="name">Oracle</span>
                 </a>
@@ -403,7 +403,7 @@
       
 
       
-        <span itemprop="articleBody"><p><img src="http://otdo5q3gt.bkt.clouddn.com/retina-macbook-macbook-computer.jpg" alt="Oracle notes"><br><strong>Some notes of Learning Oralce.</strong><br><a id="more"></a></p>
+        <span itemprop="articleBody"><p><img src="/images/img/retina-macbook-macbook-computer.jpg" alt="Oracle notes"><br><strong>Some notes of Learning Oralce.</strong><br><a id="more"></a></p>
 <hr>
 <h4 id="游标"><a href="#游标" class="headerlink" title="游标"></a>游标</h4><h6 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h6><blockquote>
 <p>游标是 SQL 的一个内存工作区，由系统或用户以变量的形式定义。游标的作用就是用于临时存储从数据库中提取的数据块。在某些情况下，需要把数据从存放在磁盘的表中调到计算机内存中进行处理，最后将处理结果显示出来或最终写回数据库。这样数据处理的速度才会提高，否则频繁的磁盘数据交换会降低效率。</p>
@@ -444,43 +444,43 @@
 </tr>
 </tbody>
 </table>
-<p>如：<br>使用隐式游标的属性，判断对雇员工资的修改是否成功。<br>输入和运行以下程序：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></div><div class="line"><span class="keyword">BEGIN</span></div><div class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> sal=sal+<span class="number">100</span> <span class="keyword">WHERE</span> empno=<span class="number">1234</span>;</div><div class="line">IF SQL%FOUND THEN</div><div class="line">DBMS_OUTPUT.PUT_LINE('成功修改雇员工资！');</div><div class="line"><span class="keyword">COMMIT</span>;</div><div class="line">ELSEDBMS_OUTPUT.PUT_LINE('修改雇员工资失败！');</div><div class="line"><span class="keyword">END</span> <span class="keyword">IF</span>;</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure></p>
+<p>如：<br>使用隐式游标的属性，判断对雇员工资的修改是否成功。<br>输入和运行以下程序：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line"><span class="keyword">UPDATE</span> emp <span class="keyword">SET</span> sal=sal+<span class="number">100</span> <span class="keyword">WHERE</span> empno=<span class="number">1234</span>;</span><br><span class="line">IF SQL%FOUND THEN</span><br><span class="line">DBMS_OUTPUT.PUT_LINE('成功修改雇员工资！');</span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line">ELSEDBMS_OUTPUT.PUT_LINE('修改雇员工资失败！');</span><br><span class="line"><span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h6 id="显式游标"><a href="#显式游标" class="headerlink" title="显式游标"></a>显式游标</h6><p>游标的使用分成以下4个步骤。  </p>
 <ol>
-<li>声明游标<br>在 DECLEAR 部分按以下格式声明游标:<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">CURSOR [游标名][([参数1] [数据类型]，[参数2] [数据类型]...])]</div><div class="line">IS <span class="keyword">SELECT</span>语句;</div></pre></td></tr></table></figure>
+<li>声明游标<br>在 DECLEAR 部分按以下格式声明游标:<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CURSOR [游标名][([参数1] [数据类型]，[参数2] [数据类型]...])]</span><br><span class="line">IS <span class="keyword">SELECT</span>语句;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>参数是可选部分，所定义的参数可以出现在SELECT语句的WHERE子句中。<br>如果定义了参数，则必须在打开游标时传递相应的实际参数。</p>
-<ol>
-<li>打开游标<br>在可执行部分，按以下格式打开游标：<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">OPEN [游标名][([实际参数1][，[实际参数2]...])];</div></pre></td></tr></table></figure>
+<ol start="2">
+<li>打开游标<br>在可执行部分，按以下格式打开游标：<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OPEN [游标名][([实际参数1][，[实际参数2]...])];</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>打开游标时，SELECT语句的查询结果就被传送到了游标工作区。</p>
-<ol>
-<li>提取数据<br>在可执行部分，按以下格式将游标工作区中的数据取到变量中。<br>提取操作必须在打开游标之后进行。<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">FETCH [游标名] INTO [变量名1][，[变量名2]...];</div></pre></td></tr></table></figure>
+<ol start="3">
+<li>提取数据<br>在可执行部分，按以下格式将游标工作区中的数据取到变量中。<br>提取操作必须在打开游标之后进行。<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FETCH [游标名] INTO [变量名1][，[变量名2]...];</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>或<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">FETCH [游标名] INTO [记录变量];</div></pre></td></tr></table></figure></p>
-<p>游标打开后有一个指针指向数据区，FETCH语句一次返回指针所指的一行数据，要返回多行需重复执行，可以使用循环语句来实现。<br>控制循环可以通过判断游标的属性来进行。<br>  定义记录变量的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[变量名] [表名]|[游标名]%ROWTYPE；</div></pre></td></tr></table></figure></p>
-<ol>
-<li>关闭游标<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">CLOSE [游标名];</div></pre></td></tr></table></figure>
+<p>或<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FETCH [游标名] INTO [记录变量];</span><br></pre></td></tr></table></figure></p>
+<p>游标打开后有一个指针指向数据区，FETCH语句一次返回指针所指的一行数据，要返回多行需重复执行，可以使用循环语句来实现。<br>控制循环可以通过判断游标的属性来进行。<br>  定义记录变量的方法如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[变量名] [表名]|[游标名]%ROWTYPE；</span><br></pre></td></tr></table></figure></p>
+<ol start="4">
+<li>关闭游标<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CLOSE [游标名];</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>显式游标打开后，必须显式地关闭。<br>游标一旦关闭，游标占用的资源就被释放，游标变成无效，必须重新打开才能使用。  </p>
-<p>如：<br>用游标提取emp表中7788雇员的名称和职务。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></div><div class="line"><span class="keyword">DECLARE</span></div><div class="line">    v_ename VARCHAR2(<span class="number">10</span>);</div><div class="line">    v_job VARCHAR2(10);</div><div class="line">    CURSOR emp_cursor IS</div><div class="line"><span class="keyword">SELECT</span> ename, job <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno = <span class="number">7788</span>;</div><div class="line"><span class="keyword">BEGIN</span></div><div class="line">    <span class="keyword">OPEN</span> emp_cursor;</div><div class="line">    FETCH emp_cursor INTO v_ename,v_job;</div><div class="line">    DBMS_OUTPUT.PUT_LINE(v_ename||','||v_job);</div><div class="line">    CLOSE emp_cursor;</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure></p>
-<p>如：<br>用游标提取emp表中7788雇员的姓名、职务和工资。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></div><div class="line"><span class="keyword">DECLARE</span></div><div class="line">	<span class="keyword">CURSOR</span> emp_cursor <span class="keyword">IS</span>  <span class="keyword">SELECT</span> ename, job, sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno = <span class="number">7788</span>;</div><div class="line">	emp_record emp_cursor%ROWTYPE;</div><div class="line">	<span class="comment">--用游标定义记录变量</span></div><div class="line"><span class="keyword">BEGIN</span></div><div class="line">	<span class="keyword">OPEN</span> emp_cursor;</div><div class="line">	FETCH emp_cursor INTO emp_record;</div><div class="line">	DBMS_OUTPUT.PUT_LINE(emp_record.ename||','|| emp_record.job||','|| emp_record.sal);</div><div class="line">	CLOSE emp_cursor;</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure></p>
-<p>如：<br>显示工资最高的前3名雇员的名称和工资。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></div><div class="line"><span class="keyword">DECLARE</span></div><div class="line">	V_ename VARCHAR2(<span class="number">10</span>);</div><div class="line">	V_sal NUMBER(5);</div><div class="line">	CURSOR emp_cursor IS  <span class="keyword">SELECT</span> ename,sal <span class="keyword">FROM</span> emp <span class="keyword">ORDER</span> <span class="keyword">BY</span> sal <span class="keyword">DESC</span>;</div><div class="line"><span class="keyword">BEGIN</span></div><div class="line">	 <span class="keyword">OPEN</span> emp_cursor;</div><div class="line">	 FOR I IN 1..3 LOOP</div><div class="line">	   FETCH emp_cursor INTO v_ename,v_sal;</div><div class="line">     DBMS_OUTPUT.PUT_LINE(v_ename||','||v_sal);</div><div class="line">   <span class="keyword">END</span> <span class="keyword">LOOP</span>;</div><div class="line">   CLOSE emp_cursor;</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure></p>
+<p>如：<br>用游标提取emp表中7788雇员的名称和职务。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">    v_ename VARCHAR2(<span class="number">10</span>);</span><br><span class="line">    v_job VARCHAR2(10);</span><br><span class="line">    CURSOR emp_cursor IS</span><br><span class="line"><span class="keyword">SELECT</span> ename, job <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno = <span class="number">7788</span>;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">    <span class="keyword">OPEN</span> emp_cursor;</span><br><span class="line">    FETCH emp_cursor INTO v_ename,v_job;</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE(v_ename||','||v_job);</span><br><span class="line">    CLOSE emp_cursor;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure></p>
+<p>如：<br>用游标提取emp表中7788雇员的姓名、职务和工资。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">	<span class="keyword">CURSOR</span> emp_cursor <span class="keyword">IS</span>  <span class="keyword">SELECT</span> ename, job, sal <span class="keyword">FROM</span> emp <span class="keyword">WHERE</span> empno = <span class="number">7788</span>;</span><br><span class="line">	emp_record emp_cursor%ROWTYPE;</span><br><span class="line">	<span class="comment">--用游标定义记录变量</span></span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	<span class="keyword">OPEN</span> emp_cursor;</span><br><span class="line">	FETCH emp_cursor INTO emp_record;</span><br><span class="line">	DBMS_OUTPUT.PUT_LINE(emp_record.ename||','|| emp_record.job||','|| emp_record.sal);</span><br><span class="line">	CLOSE emp_cursor;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure></p>
+<p>如：<br>显示工资最高的前3名雇员的名称和工资。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">	V_ename VARCHAR2(<span class="number">10</span>);</span><br><span class="line">	V_sal NUMBER(5);</span><br><span class="line">	CURSOR emp_cursor IS  <span class="keyword">SELECT</span> ename,sal <span class="keyword">FROM</span> emp <span class="keyword">ORDER</span> <span class="keyword">BY</span> sal <span class="keyword">DESC</span>;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	 <span class="keyword">OPEN</span> emp_cursor;</span><br><span class="line">	 FOR I IN 1..3 LOOP</span><br><span class="line">	   FETCH emp_cursor INTO v_ename,v_sal;</span><br><span class="line">     DBMS_OUTPUT.PUT_LINE(v_ename||','||v_sal);</span><br><span class="line">   <span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">   CLOSE emp_cursor;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure></p>
 <hr>
 <h6 id="游标循环"><a href="#游标循环" class="headerlink" title="* 游标循环"></a>* 游标循环</h6><ul>
 <li><p>使用特殊的FOR循环形式显示全部雇员的编号和名称(省略掉定义记录变量、打开游标、提取数据、关闭游标)。  </p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></div><div class="line"><span class="keyword">DECLARE</span></div><div class="line"> 	<span class="keyword">CURSOR</span> emp_cursor <span class="keyword">IS</span></div><div class="line">  <span class="keyword">SELECT</span> empno, ename <span class="keyword">FROM</span> emp;</div><div class="line"><span class="keyword">BEGIN</span></div><div class="line">	<span class="keyword">FOR</span> Emp_record <span class="keyword">IN</span> emp_cursor <span class="keyword">LOOP</span></div><div class="line">		 DBMS_OUTPUT.PUT_LINE(Emp_record.empno|| Emp_record.ename);</div><div class="line">	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line"> 	<span class="keyword">CURSOR</span> emp_cursor <span class="keyword">IS</span></span><br><span class="line">  <span class="keyword">SELECT</span> empno, ename <span class="keyword">FROM</span> emp;</span><br><span class="line"><span class="keyword">BEGIN</span></span><br><span class="line">	<span class="keyword">FOR</span> Emp_record <span class="keyword">IN</span> emp_cursor <span class="keyword">LOOP</span></span><br><span class="line">		 DBMS_OUTPUT.PUT_LINE(Emp_record.empno|| Emp_record.ename);</span><br><span class="line">	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>最简单方式</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></div><div class="line"><span class="keyword">BEGIN</span>	 <span class="keyword">FOR</span> re <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ename <span class="keyword">FROM</span> EMP)  <span class="keyword">LOOP</span></div><div class="line">		DBMS_OUTPUT.PUT_LINE(re.ename)</div><div class="line">	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">BEGIN</span>	 <span class="keyword">FOR</span> re <span class="keyword">IN</span> (<span class="keyword">SELECT</span> ename <span class="keyword">FROM</span> EMP)  <span class="keyword">LOOP</span></span><br><span class="line">		DBMS_OUTPUT.PUT_LINE(re.ename)</span><br><span class="line">	<span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h6 id="利用游标属性做循环条件"><a href="#利用游标属性做循环条件" class="headerlink" title="利用游标属性做循环条件"></a>利用游标属性做循环条件</h6><p>如：<br>使用游标的属性练习。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></div><div class="line"><span class="keyword">DECLARE</span></div><div class="line">	 V_ename VARCHAR2(<span class="number">10</span>);</div><div class="line">	 CURSOR emp_cursor IS</div><div class="line">   <span class="keyword">SELECT</span> ename <span class="keyword">FROM</span> emp;</div><div class="line"><span class="keyword">BEGIN</span>	 <span class="keyword">OPEN</span> emp_cursor;</div><div class="line">  IF emp_cursor%ISOPEN THEN</div><div class="line">    LOOP</div><div class="line">      FETCH emp_cursor INTO v_ename;</div><div class="line">      EXIT WHEN emp_cursor%NOTFOUND;</div><div class="line">      DBMS_OUTPUT.PUT_LINE(to_char(emp_cursor%ROWCOUNT)||'-'||v_ename);</div><div class="line">    <span class="keyword">END</span> <span class="keyword">LOOP</span>;</div><div class="line">  ELSE</div><div class="line">    DBMS_OUTPUT.PUT_LINE('用户信息：游标没有打开!');</div><div class="line">  <span class="keyword">END</span> <span class="keyword">IF</span>;</div><div class="line">  CLOSE emp_cursor;</div><div class="line"><span class="keyword">END</span>;</div></pre></td></tr></table></figure></p>
+<h6 id="利用游标属性做循环条件"><a href="#利用游标属性做循环条件" class="headerlink" title="利用游标属性做循环条件"></a>利用游标属性做循环条件</h6><p>如：<br>使用游标的属性练习。<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SET</span> SERVEROUTPUT <span class="keyword">ON</span></span><br><span class="line"><span class="keyword">DECLARE</span></span><br><span class="line">	 V_ename VARCHAR2(<span class="number">10</span>);</span><br><span class="line">	 CURSOR emp_cursor IS</span><br><span class="line">   <span class="keyword">SELECT</span> ename <span class="keyword">FROM</span> emp;</span><br><span class="line"><span class="keyword">BEGIN</span>	 <span class="keyword">OPEN</span> emp_cursor;</span><br><span class="line">  IF emp_cursor%ISOPEN THEN</span><br><span class="line">    LOOP</span><br><span class="line">      FETCH emp_cursor INTO v_ename;</span><br><span class="line">      EXIT WHEN emp_cursor%NOTFOUND;</span><br><span class="line">      DBMS_OUTPUT.PUT_LINE(to_char(emp_cursor%ROWCOUNT)||'-'||v_ename);</span><br><span class="line">    <span class="keyword">END</span> <span class="keyword">LOOP</span>;</span><br><span class="line">  ELSE</span><br><span class="line">    DBMS_OUTPUT.PUT_LINE('用户信息：游标没有打开!');</span><br><span class="line">  <span class="keyword">END</span> <span class="keyword">IF</span>;</span><br><span class="line">  CLOSE emp_cursor;</span><br><span class="line"><span class="keyword">END</span>;</span><br></pre></td></tr></table></figure></p>
 </span>
       
     </div>
@@ -489,9 +489,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/笔记/" rel="tag">#笔记</a>
-          
             <a href="/tags/Oracle/" rel="tag">#Oracle</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
           
         </div>
       
@@ -585,7 +585,7 @@
 
     
 
-    <div class ="post-donate">
+    <div class="post-donate">
         <div id="donate_board" class="donate_bar center">
               <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏">赏</a>
               <span id="donate_txt" class="donate_txt">
@@ -616,16 +616,14 @@
                 <tr>
                     <td>
                         
-                            <a href="http://upload-images.jianshu.io/upload_images/3107638-c31d4afbe3294111.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="支付宝打赏" class="fancybox" rel="article0" 
-                                style="float:left;margin-left:25%;margin-right:10px;">
+                            <a href="http://upload-images.jianshu.io/upload_images/3107638-c31d4afbe3294111.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="支付宝打赏" class="fancybox" rel="article0" style="float:left;margin-left:25%;margin-right:10px;">
                                 <img src="http://upload-images.jianshu.io/upload_images/3107638-c31d4afbe3294111.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="" height="164px" width="164px">
                             </a> 
                          
                     </td>
                     <td>
                         
-                            <a href="http://upload-images.jianshu.io/upload_images/3107638-5ba6406d36e20ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="微信打赏" class="fancybox" rel="article0"
-                                style="margin-right:30%">
+                            <a href="http://upload-images.jianshu.io/upload_images/3107638-5ba6406d36e20ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="微信打赏" class="fancybox" rel="article0" style="margin-right:30%">
                                 <img src="http://upload-images.jianshu.io/upload_images/3107638-5ba6406d36e20ac9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" title="" height="164px" width="164px">
                             </a>
                         
@@ -685,7 +683,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -695,8 +693,8 @@
       
 
       <section class="site-overview">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://otdo5q3gt.bkt.clouddn.com/github-headpic.jpg" alt="Frazier" itemprop="image"/>
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" src="/images/img/github-headpic.jpg" alt="Frazier" itemprop="image">
           <p class="site-author-name" itemprop="name">Frazier</p>
         </div>
         <p class="site-description motion-element" itemprop="description">大家好，我是一名路过的黑客，专门盗账号的。现在这个人的帐号被我盗了，但看这个人一直积极分享，无私奉献、过着艰苦努力、持之以恒的技术研究生活，我被深深的感动了，希望大家看到我这条消息后，可以私聊他，多鼓励他，不缺钱的就多给他一些经济上的资助，让他再接再厉！就这样吧，我下线了，眼框湿湿的难受。</p>
@@ -774,7 +772,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#游标"><span class="nav-number">1.</span> <span class="nav-text">游标</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#隐式游标属性"><span class="nav-number">1.0.2.</span> <span class="nav-text">隐式游标属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#显式游标"><span class="nav-number">1.0.3.</span> <span class="nav-text">显式游标</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#游标循环"><span class="nav-number">1.0.4.</span> <span class="nav-text">* 游标循环</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#利用游标属性做循环条件"><span class="nav-number">1.0.5.</span> <span class="nav-text">利用游标属性做循环条件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#游标"><span class="nav-number">1.</span> <span class="nav-text">游标</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#概念"><span class="nav-number">1.0.1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#隐式游标属性"><span class="nav-number">1.0.2.</span> <span class="nav-text">隐式游标属性</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#显式游标"><span class="nav-number">1.0.3.</span> <span class="nav-text">显式游标</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#游标循环"><span class="nav-number">1.0.4.</span> <span class="nav-text">* 游标循环</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#利用游标属性做循环条件"><span class="nav-number">1.0.5.</span> <span class="nav-text">利用游标属性做循环条件</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -785,13 +783,13 @@
   </aside>
 
 
-    </main>
+    </div></main>
 
     <footer id="footer" class="footer">
-      <div class="footer-inner"> <div class="copyright" >
+      <div class="footer-inner"> <div class="copyright">
   
   &copy; &nbsp;  2017 - 
-  <span itemprop="copyrightYear">2018
+  <span itemprop="copyrightYear">2019
   </span>
   <span class="with-love">
     <i class="icon-next-heart"></i>
